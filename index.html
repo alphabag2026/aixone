@@ -41,19 +41,13 @@
         .top-tab.active { color: #1a1a1a; font-weight: 700; border-bottom-color: #1a1a1a; }
         
         /* ===== SEARCH BAR ===== */
-        .search-bar-wrap {
-            padding: 12px 16px; background: #fff; margin-bottom: 8px;
-        }
+        .search-bar-wrap { padding: 12px 16px; background: #fff; margin-bottom: 8px; }
         .search-bar {
             display: flex; align-items: center; background: #f0f2f5; border-radius: 24px;
             padding: 10px 16px; gap: 8px;
         }
         .search-bar input { flex: 1; border: none; background: none; font-size: 14px; outline: none; color: #333; }
         .search-bar .search-icon { font-size: 18px; color: #666; }
-        .ai-chat-bubble {
-            position: absolute; right: 16px; top: -8px; background: #2563eb; color: white;
-            padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;
-        }
         
         /* ===== SECTIONS ===== */
         .section { display: none; }
@@ -74,9 +68,7 @@
         .down { color: #2563eb; }
         
         /* ===== WIDGET ROW ===== */
-        .widget-row {
-            display: flex; gap: 8px; padding: 0 16px; margin-bottom: 12px; overflow-x: auto;
-        }
+        .widget-row { display: flex; gap: 8px; padding: 0 16px; margin-bottom: 12px; overflow-x: auto; }
         .widget-row::-webkit-scrollbar { display: none; }
         .widget-card {
             flex-shrink: 0; background: #fff; border-radius: 12px; padding: 14px 16px;
@@ -105,7 +97,7 @@
         .news-section { background: #fff; padding: 16px; margin-bottom: 8px; }
         .news-section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
         .news-section-title { font-size: 16px; font-weight: 700; }
-        .news-more { font-size: 12px; color: #888; }
+        .news-more { font-size: 12px; color: #888; cursor: pointer; }
         
         .news-hero { border-radius: 12px; overflow: hidden; margin-bottom: 14px; position: relative; }
         .news-hero img { width: 100%; height: 180px; object-fit: cover; }
@@ -127,13 +119,42 @@
         .news-list-item .news-thumb { width: 80px; height: 80px; border-radius: 8px; overflow: hidden; flex-shrink: 0; }
         .news-list-item .news-thumb img { width: 100%; height: 100%; object-fit: cover; }
         
+        /* ===== CONTENT SECTION (요즘IT style) ===== */
+        .content-section { background: #fff; margin-bottom: 8px; }
+        .content-tabs {
+            display: flex; padding: 14px 16px 0; gap: 16px; border-bottom: 1px solid #f0f0f0;
+        }
+        .content-tab {
+            font-size: 14px; font-weight: 500; color: #888; padding-bottom: 12px;
+            cursor: pointer; border-bottom: 2px solid transparent;
+        }
+        .content-tab.active { color: #1a1a1a; font-weight: 700; border-bottom-color: #7c3aed; }
+        .content-tab .new-badge { display: inline-block; width: 6px; height: 6px; background: #7c3aed; border-radius: 50%; margin-left: 2px; vertical-align: top; }
+        
+        .content-article { padding: 20px 16px; border-bottom: 1px solid #f5f5f5; }
+        .content-article:last-child { border-bottom: none; }
+        .content-article .article-category { font-size: 12px; color: #7c3aed; font-weight: 600; margin-bottom: 8px; }
+        .content-article h3 { font-size: 18px; font-weight: 700; line-height: 1.4; margin-bottom: 10px; color: #1a1a1a; }
+        .content-article .article-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+        .content-article .article-author-img { width: 24px; height: 24px; border-radius: 50%; background: #e5e7eb; overflow: hidden; }
+        .content-article .article-author-img img { width: 100%; height: 100%; object-fit: cover; }
+        .content-article .article-author { font-size: 12px; color: #666; }
+        .content-article .article-time { font-size: 12px; color: #aaa; }
+        .content-article .article-views { font-size: 12px; color: #aaa; margin-left: auto; }
+        .content-article .article-cover { border-radius: 10px; overflow: hidden; margin-bottom: 12px; }
+        .content-article .article-cover img { width: 100%; height: 180px; object-fit: cover; }
+        .content-article .article-desc { font-size: 14px; color: #555; line-height: 1.6; }
+        .content-article .article-tags { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
+        .content-article .article-tag { padding: 4px 10px; background: #f3f4f6; border-radius: 14px; font-size: 11px; color: #555; }
+        .content-article .article-stats { display: flex; gap: 16px; margin-top: 12px; }
+        .content-article .article-stat { font-size: 12px; color: #888; }
+        
         /* ===== SOCIAL FEED ===== */
         .social-section { background: #fff; padding: 16px; margin-bottom: 8px; }
         .social-item { padding: 14px 0; border-bottom: 1px solid #f5f5f5; }
         .social-item:last-child { border-bottom: none; }
         .social-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-        .social-avatar { width: 36px; height: 36px; border-radius: 50%; background: #e5e7eb; overflow: hidden; }
-        .social-avatar img { width: 100%; height: 100%; object-fit: cover; }
+        .social-avatar { width: 36px; height: 36px; border-radius: 50%; background: #e5e7eb; display: flex; align-items: center; justify-content: center; overflow: hidden; font-size: 14px; font-weight: 700; color: white; }
         .social-name { font-size: 13px; font-weight: 600; }
         .social-handle { font-size: 11px; color: #888; }
         .social-badge { display: inline-block; background: #dbeafe; color: #2563eb; font-size: 9px; padding: 1px 5px; border-radius: 4px; font-weight: 600; margin-left: 4px; }
@@ -145,7 +166,6 @@
         
         /* ===== MARKET GRID ===== */
         .market-section { padding: 0 16px; margin-bottom: 8px; }
-        .market-header { background: #fff; padding: 16px; margin: 0 -16px; margin-bottom: 12px; border-radius: 0; }
         .market-filters { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
         .market-filters::-webkit-scrollbar { display: none; }
         .m-filter { padding: 6px 14px; border-radius: 20px; font-size: 12px; background: #f0f2f5; color: #555; white-space: nowrap; cursor: pointer; font-weight: 500; }
@@ -180,7 +200,6 @@
         .clip-item .clip-views { font-size: 10px; color: white; font-weight: 500; }
         .clip-item .clip-title { font-size: 11px; color: white; font-weight: 500; margin-top: 2px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
         
-        /* Large video cards */
         .video-large { padding: 2px; background: #1a1a1a; }
         .video-large-item { position: relative; margin-bottom: 2px; aspect-ratio: 9/14; overflow: hidden; }
         .video-large-item img { width: 100%; height: 100%; object-fit: cover; }
@@ -201,7 +220,7 @@
         .edu-level.intermediate { background: #dbeafe; color: #2563eb; }
         .edu-level.advanced { background: #fee2e2; color: #dc2626; }
         
-        /* ===== INVESTOR SECTION ===== */
+        /* ===== INVESTOR ===== */
         .investor-section { background: #fff; padding: 16px; margin-bottom: 8px; }
         .investor-card { background: #f8fafc; border-radius: 12px; padding: 16px; margin-bottom: 12px; border: 1px solid #e5e7eb; }
         .investor-card .inv-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
@@ -230,6 +249,14 @@
         .ent-product p { font-size: 12px; color: #888; line-height: 1.5; }
         .ent-product .ent-cta { display: block; margin-top: 10px; padding: 10px; background: #f0f2f5; border-radius: 8px; text-align: center; font-size: 13px; font-weight: 600; color: #2563eb; text-decoration: none; }
         
+        /* ===== CLOUD TABLE ===== */
+        .cloud-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+        .cloud-table th { padding: 8px 10px; font-size: 11px; color: #888; text-align: left; background: #f8fafc; font-weight: 500; }
+        .cloud-table td { padding: 10px; font-size: 12px; border-top: 1px solid #f0f0f0; }
+        .cloud-table .provider { font-weight: 600; }
+        .cloud-table .best { color: #059669; font-weight: 700; }
+        .cloud-table .book-btn { padding: 4px 10px; background: #2563eb; border-radius: 6px; font-size: 11px; color: white; text-decoration: none; font-weight: 500; }
+        
         /* ===== BOTTOM NAV ===== */
         .bottom-nav {
             position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
@@ -244,24 +271,26 @@
         .nav-item .nav-icon { font-size: 20px; }
         .nav-item .nav-label { font-size: 10px; color: #888; font-weight: 500; }
         .nav-item.active .nav-label { color: #1a1a1a; font-weight: 700; }
-        .nav-item.active .nav-icon { opacity: 1; }
         
-        /* ===== FLOATING SELL BUTTON ===== */
+        /* ===== FAB ===== */
         .fab-sell {
             position: fixed; bottom: 80px; right: 20px;
             width: 52px; height: 52px; background: #2563eb; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
+            display: none; align-items: center; justify-content: center;
             font-size: 24px; color: white; box-shadow: 0 4px 16px rgba(37,99,235,0.4);
             cursor: pointer; z-index: 999;
         }
+        .fab-sell.show { display: flex; }
         
-        /* ===== CLOUD TABLE ===== */
-        .cloud-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-        .cloud-table th { padding: 8px 10px; font-size: 11px; color: #888; text-align: left; background: #f8fafc; font-weight: 500; }
-        .cloud-table td { padding: 10px; font-size: 12px; border-top: 1px solid #f0f0f0; }
-        .cloud-table .provider { font-weight: 600; }
-        .cloud-table .best { color: #059669; font-weight: 700; }
-        .cloud-table .book-btn { padding: 4px 10px; background: #2563eb; border-radius: 6px; font-size: 11px; color: white; text-decoration: none; font-weight: 500; }
+        /* ===== LIVE FEED BAR ===== */
+        .live-feed {
+            background: #eff6ff; padding: 8px 16px; font-size: 12px; color: #2563eb;
+            display: flex; align-items: center; gap: 8px; overflow: hidden;
+        }
+        .live-dot { width: 6px; height: 6px; background: #ef4444; border-radius: 50%; animation: pulse 1.5s infinite; flex-shrink: 0; }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .live-text { white-space: nowrap; animation: liveScroll 20s linear infinite; }
+        @keyframes liveScroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
     </style>
 </head>
 <body>
@@ -272,17 +301,25 @@
             <div class="logo">AIX<span>ONE</span></div>
         </div>
         <div class="header-right">
-            <span class="header-icon">🔔<span class="badge">3</span></span>
+            <span class="header-icon">🔔<span class="badge">5</span></span>
             <span class="header-icon">👤</span>
         </div>
+    </div>
+    
+    <!-- LIVE FEED -->
+    <div class="live-feed">
+        <span class="live-dot"></span>
+        <span class="live-text">🟢 @user_tokyo가 RTX 4090을 $1,350에 등록 · @nvidia_labs가 B300 벤치마크 공개 · Ayar Labs $500M 시리즈E 투자 유치 · Etched AI칩 $1B 수주 확보</span>
     </div>
     
     <!-- TOP TABS -->
     <div class="top-tabs">
         <div class="top-tab active" onclick="showTab('home')">홈</div>
+        <div class="top-tab" onclick="showTab('content')">콘텐츠</div>
         <div class="top-tab" onclick="showTab('news')">뉴스</div>
         <div class="top-tab" onclick="showTab('market')">마켓</div>
         <div class="top-tab" onclick="showTab('clip')">클립</div>
+        <div class="top-tab" onclick="showTab('social')">소셜</div>
         <div class="top-tab" onclick="showTab('invest')">투자</div>
         <div class="top-tab" onclick="showTab('enterprise')">기업</div>
         <div class="top-tab" onclick="showTab('edu')">교육</div>
@@ -290,17 +327,15 @@
 
     <!-- ===== HOME TAB ===== -->
     <div class="section active" id="home">
-        <!-- Search -->
         <div class="search-bar-wrap">
             <div class="search-bar">
                 <span class="search-icon">🔍</span>
-                <input placeholder="AI 하드웨어, GPU, 로봇 검색..." />
+                <input placeholder="AI 하드웨어, GPU, 로봇, 콘텐츠 검색..." />
                 <span style="font-size:18px">📷</span>
-                <span style="font-size:18px">🎤</span>
+                <span style="font-size:18px">🤖</span>
             </div>
         </div>
         
-        <!-- Ticker -->
         <div class="ticker">
             <div class="ticker-scroll">
                 <div class="ticker-item"><span class="name">H100 80GB</span><span class="price">$28,500</span><span class="change up">▲2.3%</span></div>
@@ -314,7 +349,6 @@
             </div>
         </div>
         
-        <!-- Widget Row -->
         <div class="widget-row">
             <div class="widget-card">
                 <div class="w-label">AI 감성지수</div>
@@ -333,7 +367,6 @@
             </div>
         </div>
         
-        <!-- Ad Banner -->
         <div class="ad-banner">
             <img src="img/gpu_cluster.jpg" alt="ad">
             <div class="ad-overlay">
@@ -343,96 +376,259 @@
             </div>
         </div>
         
+        <!-- Trending Content Preview -->
+        <div class="news-section">
+            <div class="news-section-header">
+                <div class="news-section-title">📝 인기 콘텐츠</div>
+                <div class="news-more" onclick="showTab('content')">더보기 ></div>
+            </div>
+            <div class="content-article" style="padding:0">
+                <div class="article-category">AI 개발</div>
+                <h3>바이브코딩을 위한 기초 보안 A to Z</h3>
+                <div class="article-meta">
+                    <div class="article-author-img" style="background:#7c3aed;display:flex;align-items:center;justify-content:center;color:white;font-size:10px">PV</div>
+                    <span class="article-author">프로덕트 밸리</span>
+                    <span class="article-time">· 10분 · 3일 전</span>
+                    <span class="article-views">👁 2.5K</span>
+                </div>
+            </div>
+        </div>
+        
         <!-- Hero News -->
         <div class="news-section">
             <div class="news-section-header">
                 <div class="news-section-title">🔥 속보</div>
-                <div class="news-more">더보기 ></div>
+                <div class="news-more" onclick="showTab('news')">더보기 ></div>
             </div>
             <div class="news-hero">
                 <img src="img/data_center.jpg" alt="news">
                 <div class="hero-overlay">
                     <span class="hero-tag">속보</span>
-                    <h3>NVIDIA, 차세대 Blackwell Ultra B300 공식 발표 - AI 학습 성능 40% 향상</h3>
-                    <div class="hero-meta">TechCrunch · 3분 전</div>
+                    <h3>Ayar Labs, $500M 시리즈E 투자 유치 - NVIDIA, AMD, ARK 참여</h3>
+                    <div class="hero-meta">CryptoBriefing · 3일 전</div>
                 </div>
             </div>
             <div class="news-list-item">
                 <div class="news-text">
-                    <div class="news-source">Reuters</div>
-                    <h4>삼성전자, HBM4 양산 시작 - SK하이닉스 독점 체제 붕괴 조짐</h4>
-                    <div class="news-time">45분 전</div>
+                    <div class="news-source">TechCrunch</div>
+                    <h4>AI칩 스타트업 Etched, $800M 투자 유치 - $5B 밸류에이션</h4>
+                    <div class="news-time">4일 전</div>
                 </div>
                 <div class="news-thumb"><img src="img/h100_chip.jpeg" alt=""></div>
             </div>
             <div class="news-list-item">
                 <div class="news-text">
                     <div class="news-source">Bloomberg</div>
-                    <h4>글로벌 GPU 클라우드 시장, 2026년 $150B 돌파 전망</h4>
-                    <div class="news-time">2시간 전</div>
+                    <h4>NVIDIA, 스타트업에 GPU 수익 공유 모델 도입 - 21만장 투입</h4>
+                    <div class="news-time">2일 전</div>
                 </div>
                 <div class="news-thumb"><img src="img/gpu_server.webp" alt=""></div>
             </div>
         </div>
         
-        <!-- Social Feed Preview -->
+        <!-- Social Preview -->
         <div class="social-section">
             <div class="news-section-header">
                 <div class="news-section-title">💬 소셜 인사이트</div>
-                <div class="news-more">더보기 ></div>
+                <div class="news-more" onclick="showTab('social')">더보기 ></div>
             </div>
             <div class="social-item">
                 <div class="social-header">
-                    <div class="social-avatar" style="background:#1da1f2;display:flex;align-items:center;justify-content:center;color:white;font-size:14px;font-weight:700">JK</div>
+                    <div class="social-avatar" style="background:#1da1f2">SN</div>
                     <div>
-                        <div class="social-name">Jim Keller <span class="social-badge">X</span></div>
-                        <div class="social-handle">@jimkeller_real · 12분 전</div>
+                        <div class="social-name">ShinyNfts <span class="social-badge">32.4K</span></div>
+                        <div class="social-handle">@ShinyNfts · X</div>
                     </div>
                 </div>
-                <div class="social-content">The next generation of AI chips will make current H100s look like calculators. Tenstorrent is ready.</div>
-                <div class="social-image"><img src="img/h100_server.png" alt=""></div>
+                <div class="social-content">Are you investing in AI hardware? NVIDIA just announced revenue-sharing deals giving startups GPU compute in exchange for future revenue. 210,000 GPUs committed.</div>
                 <div class="social-actions">
-                    <span>❤️ 2.4K</span>
-                    <span>💬 342</span>
-                    <span>🔄 891</span>
+                    <span>❤️ 119</span>
+                    <span>🔄 42</span>
+                    <span>💬 28</span>
                 </div>
             </div>
         </div>
         
-        <!-- Used Market Preview -->
+        <!-- Market Preview -->
         <div style="padding:16px;background:#fff;margin-bottom:8px">
             <div class="news-section-header">
                 <div class="news-section-title">🛒 중고장터</div>
-                <div class="news-more">더보기 ></div>
+                <div class="news-more" onclick="showTab('market')">더보기 ></div>
             </div>
             <div class="market-grid">
                 <div class="market-card">
-                    <div class="card-img">
-                        <img src="img/rtx4090_box.jpg" alt="">
-                        <span class="card-badge">S급</span>
-                    </div>
+                    <div class="card-img"><img src="img/rtx4090_box.jpg" alt=""><span class="card-badge">S급</span></div>
                     <div class="card-body">
                         <div class="card-title">ASUS ROG RTX 4090 24GB (미개봉)</div>
                         <div class="card-price">$1,450</div>
-                        <div class="card-meta">
-                            <span class="card-location">🇺🇸 Texas</span>
-                            <span class="card-time">3분 전</span>
-                        </div>
+                        <div class="card-meta"><span class="card-location">🇺🇸 Texas</span><span class="card-time">3분 전</span></div>
                     </div>
                 </div>
                 <div class="market-card">
-                    <div class="card-img">
-                        <img src="img/h100_server.png" alt="">
-                        <span class="card-badge">A급</span>
-                    </div>
+                    <div class="card-img"><img src="img/h100_server.png" alt=""><span class="card-badge">A급</span></div>
                     <div class="card-body">
                         <div class="card-title">NVIDIA H100 80GB SXM (6개월)</div>
                         <div class="card-price">$26,000</div>
-                        <div class="card-meta">
-                            <span class="card-location">🇰🇷 서울</span>
-                            <span class="card-time">12분 전</span>
-                        </div>
+                        <div class="card-meta"><span class="card-location">🇰🇷 서울</span><span class="card-time">12분 전</span></div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CONTENT TAB (요즘IT Style) ===== -->
+    <div class="section" id="content">
+        <div class="content-section">
+            <div class="content-tabs">
+                <div class="content-tab active">콘텐츠</div>
+                <div class="content-tab">프로덕트 밸리 <span class="new-badge"></span></div>
+                <div class="content-tab">AIX 작가들</div>
+                <div class="content-tab">컬렉션</div>
+                <div class="content-tab">물어봐 AI</div>
+            </div>
+            
+            <!-- Article 1 -->
+            <div class="content-article">
+                <div class="article-category">AI 개발 · 보안</div>
+                <h3>바이브코더를 위한 기초 보안 A to Z</h3>
+                <div class="article-meta">
+                    <div class="article-author-img" style="background:#7c3aed;display:flex;align-items:center;justify-content:center;color:white;font-size:10px">PV</div>
+                    <span class="article-author">프로덕트 밸리</span>
+                    <span class="article-time">· 10분 · 3일 전</span>
+                    <span class="article-views">👁 2.5K</span>
+                </div>
+                <div class="article-cover"><img src="img/ai_dashboard.png" alt=""></div>
+                <div class="article-desc">AI 코딩 도구로 빠르게 개발하는 시대, 보안은 뒷전이 되기 쉽습니다. 이 글에서는 바이브코딩 환경에서 반드시 지켜야 할 보안 원칙과 실전 체크리스트를 정리합니다.</div>
+                <div class="article-tags">
+                    <span class="article-tag">#바이브코딩</span>
+                    <span class="article-tag">#보안</span>
+                    <span class="article-tag">#AI개발</span>
+                </div>
+                <div class="article-stats">
+                    <span class="article-stat">❤️ 142</span>
+                    <span class="article-stat">💬 23</span>
+                    <span class="article-stat">🔖 89</span>
+                </div>
+            </div>
+            
+            <!-- Article 2 -->
+            <div class="content-article">
+                <div class="article-category">AI 에이전트 · 프레임워크</div>
+                <h3>2025 AI Agent 프레임워크 완벽 비교: LangGraph vs CrewAI vs AutoGen</h3>
+                <div class="article-meta">
+                    <div class="article-author-img" style="background:#2563eb;display:flex;align-items:center;justify-content:center;color:white;font-size:10px">AI</div>
+                    <span class="article-author">AIX Labs</span>
+                    <span class="article-time">· 15분 · 1일 전</span>
+                    <span class="article-views">👁 4.8K</span>
+                </div>
+                <div class="article-cover"><img src="img/ai_analytics.png" alt=""></div>
+                <div class="article-desc">LangGraph, CrewAI, Microsoft AutoGen, Google ADK 등 주요 AI 에이전트 프레임워크를 실제 프로젝트 관점에서 비교 분석합니다. 어떤 상황에서 어떤 도구를 선택해야 할까요?</div>
+                <div class="article-tags">
+                    <span class="article-tag">#AIAgent</span>
+                    <span class="article-tag">#LangGraph</span>
+                    <span class="article-tag">#CrewAI</span>
+                    <span class="article-tag">#AutoGen</span>
+                </div>
+                <div class="article-stats">
+                    <span class="article-stat">❤️ 287</span>
+                    <span class="article-stat">💬 45</span>
+                    <span class="article-stat">🔖 203</span>
+                </div>
+            </div>
+            
+            <!-- Article 3 -->
+            <div class="content-article">
+                <div class="article-category">GPU · 클라우드</div>
+                <h3>GPU 클라우드 비용 최적화 가이드 - 월 $10,000 절약하는 법</h3>
+                <div class="article-meta">
+                    <div class="article-author-img" style="background:#059669;display:flex;align-items:center;justify-content:center;color:white;font-size:10px">CL</div>
+                    <span class="article-author">Cloud Insider</span>
+                    <span class="article-time">· 12분 · 5일 전</span>
+                    <span class="article-views">👁 6.1K</span>
+                </div>
+                <div class="article-cover"><img src="img/gpu_cluster.jpg" alt=""></div>
+                <div class="article-desc">Spot 인스턴스, 예약 할인, Neocloud 활용법까지. 실제 스타트업이 GPU 클라우드 비용을 60% 절감한 사례를 공유합니다.</div>
+                <div class="article-tags">
+                    <span class="article-tag">#GPU클라우드</span>
+                    <span class="article-tag">#비용최적화</span>
+                    <span class="article-tag">#CoreWeave</span>
+                </div>
+                <div class="article-stats">
+                    <span class="article-stat">❤️ 412</span>
+                    <span class="article-stat">💬 67</span>
+                    <span class="article-stat">🔖 298</span>
+                </div>
+            </div>
+            
+            <!-- Article 4 -->
+            <div class="content-article">
+                <div class="article-category">LLM · 파인튜닝</div>
+                <h3>LLM 파인튜닝 초보자 가이드: LoRA부터 QLoRA까지</h3>
+                <div class="article-meta">
+                    <div class="article-author-img" style="background:#dc2626;display:flex;align-items:center;justify-content:center;color:white;font-size:10px">HF</div>
+                    <span class="article-author">Hugging Face KR</span>
+                    <span class="article-time">· 20분 · 2일 전</span>
+                    <span class="article-views">👁 3.2K</span>
+                </div>
+                <div class="article-cover"><img src="img/ai_education.png" alt=""></div>
+                <div class="article-desc">사전 학습된 모델을 내 데이터에 맞게 튜닝하는 방법을 단계별로 설명합니다. RTX 4090 한 장으로도 가능한 효율적인 파인튜닝 기법을 알아보세요.</div>
+                <div class="article-tags">
+                    <span class="article-tag">#LLM</span>
+                    <span class="article-tag">#LoRA</span>
+                    <span class="article-tag">#파인튜닝</span>
+                </div>
+                <div class="article-stats">
+                    <span class="article-stat">❤️ 198</span>
+                    <span class="article-stat">💬 34</span>
+                    <span class="article-stat">🔖 156</span>
+                </div>
+            </div>
+            
+            <!-- Article 5 -->
+            <div class="content-article">
+                <div class="article-category">하드웨어 · 투자</div>
+                <h3>AI 칩 스타트업 투자 지도 2025: Etched, Cerebras, Groq 비교</h3>
+                <div class="article-meta">
+                    <div class="article-author-img" style="background:#f59e0b;display:flex;align-items:center;justify-content:center;color:white;font-size:10px">VC</div>
+                    <span class="article-author">VC Insider</span>
+                    <span class="article-time">· 8분 · 4일 전</span>
+                    <span class="article-views">👁 5.7K</span>
+                </div>
+                <div class="article-cover"><img src="img/h100_chip.jpeg" alt=""></div>
+                <div class="article-desc">NVIDIA 독점에 도전하는 AI 칩 스타트업들. Etched $5B, Cerebras IPO, Groq 추론 특화까지. 각 회사의 기술 차별점과 투자 포인트를 분석합니다.</div>
+                <div class="article-tags">
+                    <span class="article-tag">#AI칩</span>
+                    <span class="article-tag">#Etched</span>
+                    <span class="article-tag">#투자분석</span>
+                </div>
+                <div class="article-stats">
+                    <span class="article-stat">❤️ 356</span>
+                    <span class="article-stat">💬 52</span>
+                    <span class="article-stat">🔖 241</span>
+                </div>
+            </div>
+            
+            <!-- Article 6 -->
+            <div class="content-article">
+                <div class="article-category">로봇 · 산업</div>
+                <h3>휴머노이드 로봇 시장 $54B 전망 - 2031년까지의 투자 기회</h3>
+                <div class="article-meta">
+                    <div class="article-author-img" style="background:#6366f1;display:flex;align-items:center;justify-content:center;color:white;font-size:10px">RB</div>
+                    <span class="article-author">Robot Weekly</span>
+                    <span class="article-time">· 7분 · 오늘</span>
+                    <span class="article-views">👁 1.8K</span>
+                </div>
+                <div class="article-cover"><img src="img/humanoid_robot.jpg" alt=""></div>
+                <div class="article-desc">글로벌 휴머노이드 로봇 시장이 2025년 $7.9B에서 2031년 $54.2B로 성장 전망. 한국 시장은 CAGR 39%로 $583M 규모 예상. Tesla, Figure AI, UBTECH 등 주요 플레이어 분석.</div>
+                <div class="article-tags">
+                    <span class="article-tag">#휴머노이드</span>
+                    <span class="article-tag">#로봇</span>
+                    <span class="article-tag">#시장분석</span>
+                </div>
+                <div class="article-stats">
+                    <span class="article-stat">❤️ 89</span>
+                    <span class="article-stat">💬 12</span>
+                    <span class="article-stat">🔖 67</span>
                 </div>
             </div>
         </div>
@@ -445,8 +641,6 @@
                 <div class="news-section-title">AI 산업 뉴스</div>
                 <div class="news-more">기자 ▼ &nbsp; 연재 ▼ &nbsp; MY ></div>
             </div>
-            
-            <!-- Ad in news -->
             <div class="ad-banner" style="margin:0 0 14px;height:80px">
                 <img src="img/ai_dashboard.png" alt="">
                 <div class="ad-overlay">
@@ -455,43 +649,53 @@
                     <div class="ad-desc">H100 시간당 $2.49부터</div>
                 </div>
             </div>
-            
             <div class="news-hero">
                 <img src="img/humanoid_robot.jpg" alt="">
                 <div class="hero-overlay">
                     <span class="hero-tag">BREAKING</span>
-                    <h3>Tesla Optimus Gen 3 공개 - 공장 자동화 시대 본격 개막</h3>
-                    <div class="hero-meta">The Information · 28분 전</div>
+                    <h3>Ayar Labs, 광학 칩 $500M 투자 유치 - $3.75B 밸류에이션</h3>
+                    <div class="hero-meta">CryptoBriefing · NVIDIA, AMD, ARK 참여 · 3일 전</div>
                 </div>
             </div>
-            
-            <!-- News source card -->
-            <div style="padding:14px 0;border-bottom:1px solid #f0f0f0">
-                <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-                    <div style="width:36px;height:36px;border-radius:50%;background:#1a1a1a;display:flex;align-items:center;justify-content:center;color:white;font-size:11px;font-weight:700">AI</div>
-                    <div>
-                        <div style="font-size:14px;font-weight:700">AI Industry Daily <span style="background:#fef3c7;color:#d97706;font-size:9px;padding:2px 5px;border-radius:3px;font-weight:600">500만</span></div>
-                        <div style="font-size:11px;color:#888">07월 05일 18:51</div>
-                    </div>
+            <div class="news-list-item">
+                <div class="news-text">
+                    <div class="news-source">StartupFortune</div>
+                    <h4>Etched, $800M 투자로 트랜스포머 전용 실리콘 시대 선언 - GPU 시대 종말 베팅</h4>
+                    <div class="news-time">4일 전</div>
                 </div>
-                <div style="font-size:14px;line-height:1.7;color:#333">
-                    <p style="margin-bottom:8px">"NVIDIA H100 중고 가격 $28,500 돌파"...데이터센터 수요 폭증</p>
-                    <p style="margin-bottom:8px">"AMD MI300X, 실제 벤치마크에서 H100 추월"...가성비 전쟁</p>
-                    <p style="margin-bottom:8px">"OpenAI, 자체 AI 칩 설계 팀 100명 규모로 확대"</p>
-                    <p>"글로벌 GPU 클라우드 시장 $150B 돌파 전망"</p>
-                </div>
+                <div class="news-thumb"><img src="img/h100_chip.jpeg" alt=""></div>
             </div>
-            
-            <!-- Image news grid -->
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-top:14px">
-                <div>
-                    <div style="border-radius:8px;overflow:hidden;margin-bottom:6px"><img src="img/humanoid_robots2.jpg" style="width:100%;height:120px;object-fit:cover" alt=""></div>
-                    <div style="font-size:13px;font-weight:500;line-height:1.3">Figure AI, 시리즈 B $675M 투자 유치 성공</div>
+            <div class="news-list-item">
+                <div class="news-text">
+                    <div class="news-source">CNBC</div>
+                    <h4>기업들, AI 임대에서 자체 구축으로 전환 - GPU 직접 구매 급증</h4>
+                    <div class="news-time">3일 전</div>
                 </div>
-                <div>
-                    <div style="border-radius:8px;overflow:hidden;margin-bottom:6px"><img src="img/gpu_cluster.jpg" style="width:100%;height:120px;object-fit:cover" alt=""></div>
-                    <div style="font-size:13px;font-weight:500;line-height:1.3">100만 GPU 클러스터 2027년 가동 예정</div>
+                <div class="news-thumb"><img src="img/gpu_server.webp" alt=""></div>
+            </div>
+            <div class="news-list-item">
+                <div class="news-text">
+                    <div class="news-source">McKinsey</div>
+                    <h4>글로벌 로보틱스 시장 2040년 $370B 전망 - 휴머노이드 급성장</h4>
+                    <div class="news-time">1주 전</div>
                 </div>
+                <div class="news-thumb"><img src="img/humanoid_robots2.jpg" alt=""></div>
+            </div>
+            <div class="news-list-item">
+                <div class="news-text">
+                    <div class="news-source">GuruFocus</div>
+                    <h4>AI 칩 스타트업 투자 붐 - NVIDIA 독점에 도전장</h4>
+                    <div class="news-time">4일 전</div>
+                </div>
+                <div class="news-thumb"><img src="img/rtx4090_nvidia.jpg" alt=""></div>
+            </div>
+            <div class="news-list-item">
+                <div class="news-text">
+                    <div class="news-source">MarketsAndMarkets</div>
+                    <h4>한국 휴머노이드 로봇 시장 2030년 $583M - CAGR 39%</h4>
+                    <div class="news-time">2일 전</div>
+                </div>
+                <div class="news-thumb"><img src="img/humanoid_robot.jpg" alt=""></div>
             </div>
         </div>
     </div>
@@ -516,96 +720,17 @@
                 <span class="m-filter">로봇</span>
             </div>
         </div>
-        
         <div class="market-section">
             <div class="market-grid">
-                <div class="market-card">
-                    <div class="card-img">
-                        <img src="img/rtx4090_nvidia.jpg" alt="">
-                        <span class="card-badge">S급 · 미개봉</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-title">NVIDIA RTX 4090 FE 24GB</div>
-                        <div class="card-price">$1,350</div>
-                        <div class="card-meta">
-                            <span class="card-location">🇺🇸 California</span>
-                            <span class="card-time">방금</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="market-card">
-                    <div class="card-img">
-                        <img src="img/h100_server.png" alt="">
-                        <span class="card-badge">A급</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-title">H100 80GB SXM5 (보증 8개월)</div>
-                        <div class="card-price">$26,000</div>
-                        <div class="card-meta">
-                            <span class="card-location">🇰🇷 판교</span>
-                            <span class="card-time">5분 전</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="market-card">
-                    <div class="card-img">
-                        <img src="img/rtx4090_box.jpg" alt="">
-                        <span class="card-badge">A급</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-title">ASUS ROG RTX 4090 OC (3개월 사용)</div>
-                        <div class="card-price">$1,100</div>
-                        <div class="card-meta">
-                            <span class="card-location">🇯🇵 Tokyo</span>
-                            <span class="card-time">18분 전</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="market-card">
-                    <div class="card-img">
-                        <img src="img/gpu_server.webp" alt="">
-                        <span class="card-badge">B급</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-title">Dell R750xa 서버 (A100x4 포함)</div>
-                        <div class="card-price">$68,000</div>
-                        <div class="card-meta">
-                            <span class="card-location">🇸🇬 Singapore</span>
-                            <span class="card-time">32분 전</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="market-card">
-                    <div class="card-img">
-                        <img src="img/humanoid_robot.jpg" alt="">
-                        <span class="card-badge">NEW</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-title">Unitree G1 휴머노이드 로봇</div>
-                        <div class="card-price">$16,000</div>
-                        <div class="card-meta">
-                            <span class="card-location">🇨🇳 Shenzhen</span>
-                            <span class="card-time">1시간 전</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="market-card">
-                    <div class="card-img">
-                        <img src="img/data_center.jpg" alt="">
-                        <span class="card-badge">기업 매물</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-title">42U 서버랙 + UPS + 냉각 풀세트</div>
-                        <div class="card-price">$12,500</div>
-                        <div class="card-meta">
-                            <span class="card-location">🇺🇸 Virginia</span>
-                            <span class="card-time">2시간 전</span>
-                        </div>
-                    </div>
-                </div>
+                <div class="market-card"><div class="card-img"><img src="img/rtx4090_nvidia.jpg" alt=""><span class="card-badge">S급 · 미개봉</span></div><div class="card-body"><div class="card-title">NVIDIA RTX 4090 FE 24GB</div><div class="card-price">$1,350</div><div class="card-meta"><span class="card-location">🇺🇸 California</span><span class="card-time">방금</span></div></div></div>
+                <div class="market-card"><div class="card-img"><img src="img/h100_server.png" alt=""><span class="card-badge">A급</span></div><div class="card-body"><div class="card-title">H100 80GB SXM5 (보증 8개월)</div><div class="card-price">$26,000</div><div class="card-meta"><span class="card-location">🇰🇷 판교</span><span class="card-time">5분 전</span></div></div></div>
+                <div class="market-card"><div class="card-img"><img src="img/rtx4090_box.jpg" alt=""><span class="card-badge">A급</span></div><div class="card-body"><div class="card-title">ASUS ROG RTX 4090 OC (3개월)</div><div class="card-price">$1,100</div><div class="card-meta"><span class="card-location">🇯🇵 Tokyo</span><span class="card-time">18분 전</span></div></div></div>
+                <div class="market-card"><div class="card-img"><img src="img/gpu_server.webp" alt=""><span class="card-badge">B급</span></div><div class="card-body"><div class="card-title">Dell R750xa 서버 (A100x4)</div><div class="card-price">$68,000</div><div class="card-meta"><span class="card-location">🇸🇬 Singapore</span><span class="card-time">32분 전</span></div></div></div>
+                <div class="market-card"><div class="card-img"><img src="img/humanoid_robot.jpg" alt=""><span class="card-badge">NEW</span></div><div class="card-body"><div class="card-title">Unitree G1 휴머노이드 로봇</div><div class="card-price">$16,000</div><div class="card-meta"><span class="card-location">🇨🇳 Shenzhen</span><span class="card-time">1시간 전</span></div></div></div>
+                <div class="market-card"><div class="card-img"><img src="img/data_center.jpg" alt=""><span class="card-badge">기업 매물</span></div><div class="card-body"><div class="card-title">42U 서버랙 + UPS + 냉각 풀세트</div><div class="card-price">$12,500</div><div class="card-meta"><span class="card-location">🇺🇸 Virginia</span><span class="card-time">2시간 전</span></div></div></div>
             </div>
         </div>
-        <div class="fab-sell">+</div>
+        <div class="fab-sell show">+</div>
     </div>
 
     <!-- ===== CLIP TAB ===== -->
@@ -620,61 +745,162 @@
             <span class="clip-tag">AI 로봇</span>
             <span class="clip-tag">서버 구축</span>
             <span class="clip-tag">데이터센터</span>
+            <span class="clip-tag">바이브코딩</span>
         </div>
-        
-        <!-- Large Video -->
         <div class="video-large">
             <div class="video-large-item">
                 <img src="img/gpu_cluster.jpg" alt="">
                 <div class="vl-overlay">
-                    <div class="vl-title">H100 vs B200 실제 벤치마크 - LLaMA 3.1 학습 속도 2배 차이</div>
+                    <div class="vl-title">H100 vs B200 실제 벤치마크 - LLaMA 학습 속도 2배 차이</div>
                     <div class="vl-author">@ai_hardware_lab · 조회 12.4K</div>
                 </div>
             </div>
         </div>
-        
-        <!-- Clip Grid -->
         <div class="clip-grid">
-            <div class="clip-item">
-                <img src="img/data_center.jpg" alt="">
-                <div class="clip-overlay">
-                    <div class="clip-views">▶ 8.2K</div>
-                    <div class="clip-title">내 방에 미니 데이터센터 만들기</div>
+            <div class="clip-item"><img src="img/data_center.jpg" alt=""><div class="clip-overlay"><div class="clip-views">▶ 8.2K</div><div class="clip-title">내 방에 미니 데이터센터 만들기</div></div></div>
+            <div class="clip-item"><img src="img/humanoid_robot.jpg" alt=""><div class="clip-overlay"><div class="clip-views">▶ 24.1K</div><div class="clip-title">Tesla Optimus 실제 작동 영상</div></div></div>
+            <div class="clip-item"><img src="img/rtx4090_nvidia.jpg" alt=""><div class="clip-overlay"><div class="clip-views">▶ 5.6K</div><div class="clip-title">RTX 5090 언박싱 & 첫인상</div></div></div>
+            <div class="clip-item"><img src="img/h100_server.png" alt=""><div class="clip-overlay"><div class="clip-views">▶ 15.3K</div><div class="clip-title">H100 서버 조립 풀영상</div></div></div>
+            <div class="clip-item"><img src="img/ai_analytics.png" alt=""><div class="clip-overlay"><div class="clip-views">▶ 3.1K</div><div class="clip-title">AI 대시보드 만들기 튜토리얼</div></div></div>
+            <div class="clip-item"><img src="img/humanoid_robots2.jpg" alt=""><div class="clip-overlay"><div class="clip-views">▶ 42.7K</div><div class="clip-title">2026 로봇 TOP 10 비교</div></div></div>
+        </div>
+    </div>
+
+    <!-- ===== SOCIAL TAB (Real Crawled Data) ===== -->
+    <div class="section" id="social">
+        <div class="social-section">
+            <div class="news-section-header">
+                <div class="news-section-title">🐦 실시간 소셜 피드</div>
+                <div class="news-more">X · Reddit · LinkedIn</div>
+            </div>
+            
+            <div class="social-item">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#f59e0b">SN</div>
+                    <div>
+                        <div class="social-name">ShinyNfts <span class="social-badge">X · 32.4K</span></div>
+                        <div class="social-handle">@ShinyNfts · 방금</div>
+                    </div>
+                </div>
+                <div class="social-content">Good Afternoon. Touch the grass on Sunday but keep build and research. What is the alpha for this Sunday? Are you investing in AI hardware? 🚀</div>
+                <div class="social-image"><img src="img/gpu_cluster.jpg" alt=""></div>
+                <div class="social-actions">
+                    <span>❤️ 119</span>
+                    <span>🔄 42</span>
+                    <span>💬 28</span>
                 </div>
             </div>
-            <div class="clip-item">
-                <img src="img/humanoid_robot.jpg" alt="">
-                <div class="clip-overlay">
-                    <div class="clip-views">▶ 24.1K</div>
-                    <div class="clip-title">Tesla Optimus 실제 작동 영상</div>
+            
+            <div class="social-item">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#1a1a1a">NX</div>
+                    <div>
+                        <div class="social-name">NeilXbt <span class="social-badge">X · 16.4K</span></div>
+                        <div class="social-handle">@neil_xbt</div>
+                    </div>
+                </div>
+                <div class="social-content">50 years of software and chip growth produced historically low overall productivity gains! Marc Andreessen's explanation: increased regulation absorbed the gains before they reached the broader economy.</div>
+                <div class="social-actions">
+                    <span>❤️ 35</span>
+                    <span>🔄 13</span>
+                    <span>💬 15</span>
                 </div>
             </div>
-            <div class="clip-item">
-                <img src="img/rtx4090_nvidia.jpg" alt="">
-                <div class="clip-overlay">
-                    <div class="clip-views">▶ 5.6K</div>
-                    <div class="clip-title">RTX 5090 언박싱 & 첫인상</div>
+            
+            <div class="social-item">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#2563eb">TZ</div>
+                    <div>
+                        <div class="social-name">Timzyxzyx <span class="social-badge">X</span></div>
+                        <div class="social-handle">@Timzyxzyx · 1.2K followers</div>
+                    </div>
+                </div>
+                <div class="social-content">I've changed my answer to this question a few times, but I keep coming back to NVIDIA. Not because it's everywhere in the headlines, but because every time I read about a new AI model or startup, sooner or later, it runs on their chips.</div>
+                <div class="social-actions">
+                    <span>❤️ 38</span>
+                    <span>🔄 0</span>
+                    <span>💬 1</span>
                 </div>
             </div>
-            <div class="clip-item">
-                <img src="img/h100_server.png" alt="">
-                <div class="clip-overlay">
-                    <div class="clip-views">▶ 15.3K</div>
-                    <div class="clip-title">H100 서버 조립 풀영상</div>
+            
+            <div class="social-item">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#059669">TH</div>
+                    <div>
+                        <div class="social-name">TechniaHQ <span class="social-badge">X · 14.7K</span></div>
+                        <div class="social-handle">@techniahq</div>
+                    </div>
+                </div>
+                <div class="social-content">Humanoid robots look simple from the outside. Inside, they are a dense stack of machining, bearings, electronics, sensors, and software working in perfect sync. The engineering complexity is staggering.</div>
+                <div class="social-image"><img src="img/humanoid_robots2.jpg" alt=""></div>
+                <div class="social-actions">
+                    <span>❤️ 38</span>
+                    <span>🔄 12</span>
+                    <span>💬 5</span>
                 </div>
             </div>
-            <div class="clip-item">
-                <img src="img/ai_analytics.png" alt="">
-                <div class="clip-overlay">
-                    <div class="clip-views">▶ 3.1K</div>
-                    <div class="clip-title">AI 대시보드 만들기 튜토리얼</div>
+            
+            <div class="social-item">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#7c3aed">VX</div>
+                    <div>
+                        <div class="social-name">Veltrx AI <span class="social-badge">X</span></div>
+                        <div class="social-handle">@Veltrxai · 870 followers</div>
+                    </div>
+                </div>
+                <div class="social-content">NVIDIA just open sourced a 3B vision model that runs 10x faster than Qwen3 VL on a single consumer GPU. Here's the money shot: you can run it on a single RTX 4090.</div>
+                <div class="social-actions">
+                    <span>❤️ 7</span>
+                    <span>🔄 2</span>
+                    <span>💬 1</span>
                 </div>
             </div>
-            <div class="clip-item">
-                <img src="img/humanoid_robots2.jpg" alt="">
-                <div class="clip-overlay">
-                    <div class="clip-views">▶ 42.7K</div>
-                    <div class="clip-title">2026 로봇 TOP 10 비교</div>
+            
+            <div class="social-item">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#dc2626">AR</div>
+                    <div>
+                        <div class="social-name">Aaron Ross <span class="social-badge">X</span></div>
+                        <div class="social-handle">@AaronRossPreIPO</div>
+                    </div>
+                </div>
+                <div class="social-content">A startup that nearly ran out of cash in 2023 just booked $1 billion in orders to take on Nvidia. Etched came out of stealth this week with numbers that are hard to ignore: a $5 billion valuation, and a chip that's 10x faster for transformer workloads.</div>
+                <div class="social-actions">
+                    <span>❤️ 4</span>
+                    <span>🔄 1</span>
+                    <span>💬 0</span>
+                </div>
+            </div>
+            
+            <div class="social-item">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#f59e0b">BN</div>
+                    <div>
+                        <div class="social-name">Bobbi News <span class="social-badge">X</span></div>
+                        <div class="social-handle">@bobbi_news</div>
+                    </div>
+                </div>
+                <div class="social-content">💻 Anthropic Explores Custom AI Chip Manufacturing Partnership With Samsung. AI startup Anthropic is reportedly in active discussions with Samsung Electronics to develop a custom artificial intelligence chip.</div>
+                <div class="social-actions">
+                    <span>❤️ 2</span>
+                    <span>🔄 0</span>
+                    <span>💬 0</span>
+                </div>
+            </div>
+            
+            <div class="social-item">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#6366f1">CM</div>
+                    <div>
+                        <div class="social-name">Casmo0n <span class="social-badge">X</span></div>
+                        <div class="social-handle">@Casmo0n</div>
+                    </div>
+                </div>
+                <div class="social-content">CHINESE DEV RAKES IN $22K A MONTH RUNNING AI ON $80 CARDS PULLED FROM PS5 CONSOLES WHILE EVERY AI STARTUP IS STUCK ON AN 8-MONTH H100 WAITLIST. Just a Lenovo office PC with an AMD BC-250 sticking out.</div>
+                <div class="social-actions">
+                    <span>❤️ 2</span>
+                    <span>🔄 0</span>
+                    <span>💬 0</span>
                 </div>
             </div>
         </div>
@@ -687,16 +913,12 @@
                 <div class="news-section-title">🤝 투자자 & 파트너 매칭</div>
                 <div class="news-more">필터 ></div>
             </div>
-            
             <div class="investor-card">
                 <div class="inv-header">
                     <div class="inv-logo"><img src="img/humanoid_robots2.jpg" alt=""></div>
-                    <div>
-                        <div class="inv-name">NeuroRobotics Inc.</div>
-                        <div class="inv-type">Robotics · Series A · 🇺🇸 San Francisco</div>
-                    </div>
+                    <div><div class="inv-name">NeuroRobotics Inc.</div><div class="inv-type">Robotics · Series A · 🇺🇸 San Francisco</div></div>
                 </div>
-                <div class="inv-desc">자율주행 물류 로봇을 위한 경량 AI 추론 엔진 개발. 현재 시리즈 A 투자 유치 중. Fortune 500 물류사 3곳 POC 완료.</div>
+                <div class="inv-desc">자율주행 물류 로봇을 위한 경량 AI 추론 엔진 개발. Fortune 500 물류사 3곳 POC 완료.</div>
                 <div class="inv-needs">
                     <div class="inv-need"><div class="val">$5M</div><div class="label">투자금</div></div>
                     <div class="inv-need"><div class="val">128장</div><div class="label">GPU</div></div>
@@ -704,14 +926,10 @@
                 </div>
                 <button class="inv-btn">관심 표현하기</button>
             </div>
-            
             <div class="investor-card">
                 <div class="inv-header">
                     <div class="inv-logo" style="background:#059669;color:white;font-size:12px">AG</div>
-                    <div>
-                        <div class="inv-name">AgriVision AI</div>
-                        <div class="inv-type">AgriTech · Seed · 🇻🇳 Ho Chi Minh</div>
-                    </div>
+                    <div><div class="inv-name">AgriVision AI</div><div class="inv-type">AgriTech · Seed · 🇻🇳 Ho Chi Minh</div></div>
                 </div>
                 <div class="inv-desc">위성 이미지 + 드론 데이터를 활용한 정밀 농업 AI 플랫폼. 동남아 시장 진출을 위한 현지 파트너 모집 중.</div>
                 <div class="inv-needs">
@@ -731,40 +949,24 @@
                 <div class="news-section-title">🏢 기업 신제품 & 클라우드</div>
                 <div class="news-more">광고 문의 ></div>
             </div>
-            
             <div class="ent-product">
-                <div class="ent-img">
-                    <img src="img/gpu_cluster.jpg" alt="">
-                    <span class="ent-badge">🚀 TODAY'S LAUNCH</span>
-                </div>
+                <div class="ent-img"><img src="img/gpu_cluster.jpg" alt=""><span class="ent-badge">🚀 TODAY'S LAUNCH</span></div>
                 <div class="ent-body">
-                    <div class="ent-company">
-                        <div class="ent-company-logo">CW</div>
-                        <span class="ent-company-name">CoreWeave · Cloud GPU</span>
-                    </div>
+                    <div class="ent-company"><div class="ent-company-logo">CW</div><span class="ent-company-name">CoreWeave · Cloud GPU</span></div>
                     <h4>CoreWeave Inference Engine 2.0 출시</h4>
                     <p>LLM 추론 비용 60% 절감. H100/B200 클러스터에서 즉시 사용 가능.</p>
                     <a class="ent-cta" href="#">자세히 보기 & 무료 체험 →</a>
                 </div>
             </div>
-            
             <div class="ent-product">
-                <div class="ent-img">
-                    <img src="img/h100_server.png" alt="">
-                    <span class="ent-badge">📦 NEW HARDWARE</span>
-                </div>
+                <div class="ent-img"><img src="img/h100_server.png" alt=""><span class="ent-badge">📦 NEW HARDWARE</span></div>
                 <div class="ent-body">
-                    <div class="ent-company">
-                        <div class="ent-company-logo" style="background:#76b900">NV</div>
-                        <span class="ent-company-name">NVIDIA · AI Hardware</span>
-                    </div>
+                    <div class="ent-company"><div class="ent-company-logo" style="background:#76b900">NV</div><span class="ent-company-name">NVIDIA · AI Hardware</span></div>
                     <h4>DGX B200 SuperPOD - 엔터프라이즈 AI의 새 기준</h4>
                     <p>72개의 B200 GPU를 하나의 시스템으로. 10 Exaflops AI 연산.</p>
                     <a class="ent-cta" href="#">사양 확인 & 견적 요청 →</a>
                 </div>
             </div>
-            
-            <!-- Cloud Compare -->
             <div style="margin-top:16px">
                 <div class="news-section-title" style="margin-bottom:4px">☁️ GPU 클라우드 가격 비교</div>
                 <div style="font-size:11px;color:#888;margin-bottom:8px">H100 80GB SXM 기준 · 실시간 업데이트</div>
@@ -789,7 +991,6 @@
                 <div class="news-section-title">📚 교육센터 & 백서</div>
                 <div class="news-more">AI Doctor 🤖</div>
             </div>
-            
             <div class="market-filters" style="margin-bottom:14px">
                 <span class="m-filter active">전체</span>
                 <span class="m-filter">초급 (중학생)</span>
@@ -798,72 +999,21 @@
                 <span class="m-filter">백서</span>
                 <span class="m-filter">영상강의</span>
             </div>
-            
-            <div class="edu-card">
-                <div class="edu-thumb"><img src="img/ai_education.png" alt=""></div>
-                <div class="edu-info">
-                    <h4>AI란 무엇인가? - 중학생도 이해하는 인공지능</h4>
-                    <div class="edu-meta">AIX ONE Education · 12 pages</div>
-                    <span class="edu-level beginner">초급</span>
-                </div>
-            </div>
-            <div class="edu-card">
-                <div class="edu-thumb"><img src="img/ai_learning.jpg" alt=""></div>
-                <div class="edu-info">
-                    <h4>GPU 클러스터 구축 A to Z - 홈랩부터 데이터센터</h4>
-                    <div class="edu-meta">AI Hardware Lab · 영상 45분</div>
-                    <span class="edu-level intermediate">중급</span>
-                </div>
-            </div>
-            <div class="edu-card">
-                <div class="edu-thumb"><img src="img/ai_dashboard.png" alt=""></div>
-                <div class="edu-info">
-                    <h4>GPT-5 Technical Report: Scaling Laws Beyond 10T</h4>
-                    <div class="edu-meta">OpenAI · 48 pages · 2026.07.01</div>
-                    <span class="edu-level advanced">고급</span>
-                </div>
-            </div>
-            <div class="edu-card">
-                <div class="edu-thumb"><img src="img/pitch_deck.jpeg" alt=""></div>
-                <div class="edu-info">
-                    <h4>AI 스타트업 피치덱 작성법 - 투자 유치 완벽 가이드</h4>
-                    <div class="edu-meta">Startup Academy · 32 pages</div>
-                    <span class="edu-level intermediate">중급</span>
-                </div>
-            </div>
-            <div class="edu-card">
-                <div class="edu-thumb"><img src="img/humanoid_robot.jpg" alt=""></div>
-                <div class="edu-info">
-                    <h4>휴머노이드 로봇 산업 백서 2026</h4>
-                    <div class="edu-meta">Goldman Sachs Research · 64 pages</div>
-                    <span class="edu-level advanced">고급</span>
-                </div>
-            </div>
+            <div class="edu-card"><div class="edu-thumb"><img src="img/ai_education.png" alt=""></div><div class="edu-info"><h4>AI란 무엇인가? - 중학생도 이해하는 인공지능</h4><div class="edu-meta">AIX ONE Education · 12 pages</div><span class="edu-level beginner">초급</span></div></div>
+            <div class="edu-card"><div class="edu-thumb"><img src="img/ai_learning.jpg" alt=""></div><div class="edu-info"><h4>GPU 클러스터 구축 A to Z - 홈랩부터 데이터센터</h4><div class="edu-meta">AI Hardware Lab · 영상 45분</div><span class="edu-level intermediate">중급</span></div></div>
+            <div class="edu-card"><div class="edu-thumb"><img src="img/ai_dashboard.png" alt=""></div><div class="edu-info"><h4>GPT-5 Technical Report: Scaling Laws Beyond 10T</h4><div class="edu-meta">OpenAI · 48 pages · 2026.07.01</div><span class="edu-level advanced">고급</span></div></div>
+            <div class="edu-card"><div class="edu-thumb"><img src="img/pitch_deck.jpeg" alt=""></div><div class="edu-info"><h4>AI 스타트업 피치덱 작성법 - 투자 유치 완벽 가이드</h4><div class="edu-meta">Startup Academy · 32 pages</div><span class="edu-level intermediate">중급</span></div></div>
+            <div class="edu-card"><div class="edu-thumb"><img src="img/humanoid_robot.jpg" alt=""></div><div class="edu-info"><h4>휴머노이드 로봇 산업 백서 2026</h4><div class="edu-meta">Goldman Sachs Research · 64 pages</div><span class="edu-level advanced">고급</span></div></div>
         </div>
     </div>
 
     <!-- BOTTOM NAV -->
     <div class="bottom-nav">
-        <div class="nav-item active" onclick="showTab('home')">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-label">홈</span>
-        </div>
-        <div class="nav-item" onclick="showTab('news')">
-            <span class="nav-icon">📰</span>
-            <span class="nav-label">뉴스</span>
-        </div>
-        <div class="nav-item" onclick="showTab('market')">
-            <span class="nav-icon">🛒</span>
-            <span class="nav-label">마켓</span>
-        </div>
-        <div class="nav-item" onclick="showTab('clip')">
-            <span class="nav-icon">🎬</span>
-            <span class="nav-label">클립</span>
-        </div>
-        <div class="nav-item" onclick="showTab('invest')">
-            <span class="nav-icon">💰</span>
-            <span class="nav-label">투자</span>
-        </div>
+        <div class="nav-item active" onclick="showTab('home')"><span class="nav-icon">🏠</span><span class="nav-label">홈</span></div>
+        <div class="nav-item" onclick="showTab('content')"><span class="nav-icon">📝</span><span class="nav-label">콘텐츠</span></div>
+        <div class="nav-item" onclick="showTab('news')"><span class="nav-icon">📰</span><span class="nav-label">뉴스</span></div>
+        <div class="nav-item" onclick="showTab('market')"><span class="nav-icon">🛒</span><span class="nav-label">마켓</span></div>
+        <div class="nav-item" onclick="showTab('social')"><span class="nav-icon">💬</span><span class="nav-label">소셜</span></div>
     </div>
 
     <script>
@@ -873,11 +1023,14 @@
             document.querySelectorAll('.top-tab').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
             
-            const tabMap = {home:0, news:1, market:2, clip:3, invest:4, enterprise:5, edu:6};
-            const navMap = {home:0, news:1, market:2, clip:3, invest:4};
+            const tabMap = {home:0, content:1, news:2, market:3, clip:4, social:5, invest:6, enterprise:7, edu:8};
+            const navMap = {home:0, content:1, news:2, market:3, social:4};
             
             if(tabMap[id] !== undefined) document.querySelectorAll('.top-tab')[tabMap[id]].classList.add('active');
             if(navMap[id] !== undefined) document.querySelectorAll('.nav-item')[navMap[id]].classList.add('active');
+            
+            // Show/hide FAB
+            document.querySelector('.fab-sell').classList.toggle('show', id === 'market');
             
             window.scrollTo(0, 0);
         }
