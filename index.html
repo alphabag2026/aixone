@@ -215,6 +215,66 @@
         .mcap-tab { padding: 6px 12px; border-radius: 8px; font-size: 11px; font-weight: 600; cursor: pointer; white-space: nowrap; background: #f3f4f6; color: #555; }
         .mcap-tab.active { background: #1a1a1a; color: #fff; }
         
+        /* Sticky Table Header */
+        .mcap-table thead { position: sticky; top: 0; background: #fff; z-index: 5; }
+        .mcap-table-wrap { max-height: 600px; overflow-y: auto; overflow-x: auto; border-radius: 8px; border: 1px solid #f0f0f0; }
+        .mcap-table-wrap::-webkit-scrollbar { width: 4px; }
+        .mcap-table-wrap::-webkit-scrollbar-thumb { background: #ddd; border-radius: 4px; }
+        
+        /* Sortable Headers */
+        .mcap-table th.sortable { cursor: pointer; user-select: none; }
+        .mcap-table th.sortable:hover { color: #2563eb; }
+        .mcap-table th .sort-icon { font-size: 8px; margin-left: 2px; }
+        
+        /* Watchlist Star */
+        .mcap-star { cursor: pointer; font-size: 14px; color: #ddd; transition: color 0.2s; }
+        .mcap-star.active { color: #f59e0b; }
+        .mcap-star:hover { color: #f59e0b; }
+        
+        /* Sentiment Bar */
+        .mcap-sentiment { display: flex; align-items: center; gap: 4px; margin-top: 2px; }
+        .sentiment-bar { height: 4px; border-radius: 2px; flex: 1; background: #fee2e2; overflow: hidden; }
+        .sentiment-bar .bull { height: 100%; background: #10b981; border-radius: 2px; }
+        .sentiment-label { font-size: 9px; color: #888; white-space: nowrap; }
+        
+        /* SPONSORED Row */
+        .mcap-table tr.sponsored { background: linear-gradient(90deg, #eff6ff, #f0fdf4); }
+        .mcap-table tr.sponsored td { border-bottom: 1px solid #bfdbfe; }
+        .sponsored-badge { display: inline-block; background: #2563eb; color: white; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 700; margin-left: 4px; vertical-align: middle; }
+        
+        /* Badges */
+        .mcap-badge { display: inline-block; font-size: 8px; padding: 1px 5px; border-radius: 3px; font-weight: 700; margin-left: 4px; vertical-align: middle; }
+        .mcap-badge.new { background: #dbeafe; color: #2563eb; }
+        .mcap-badge.hot { background: #fee2e2; color: #dc2626; }
+        .mcap-badge.pump { background: #d1fae5; color: #059669; }
+        
+        /* Heatmap */
+        .mcap-heatmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin-bottom: 16px; }
+        .heatmap-block { border-radius: 8px; padding: 10px 8px; text-align: center; min-height: 60px; display: flex; flex-direction: column; justify-content: center; }
+        .heatmap-block .hm-name { font-size: 11px; font-weight: 700; color: white; }
+        .heatmap-block .hm-change { font-size: 13px; font-weight: 800; color: white; margin-top: 2px; }
+        .heatmap-block .hm-price { font-size: 9px; color: rgba(255,255,255,0.8); margin-top: 2px; }
+        
+        /* View Toggle */
+        .mcap-view-toggle { display: flex; gap: 4px; margin-bottom: 12px; }
+        .view-btn { padding: 6px 12px; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; background: #f3f4f6; color: #555; border: none; }
+        .view-btn.active { background: #1a1a1a; color: #fff; }
+        
+        /* Price Alert Bell */
+        .mcap-alert { cursor: pointer; font-size: 12px; color: #ddd; transition: color 0.2s; }
+        .mcap-alert:hover { color: #f59e0b; }
+        .mcap-alert.active { color: #f59e0b; }
+        
+        /* Compare Checkbox */
+        .mcap-compare { width: 14px; height: 14px; accent-color: #2563eb; cursor: pointer; }
+        .compare-bar { position: fixed; bottom: 70px; left: 50%; transform: translateX(-50%); background: #1a1a1a; color: white; padding: 10px 20px; border-radius: 24px; font-size: 12px; font-weight: 600; display: none; align-items: center; gap: 10px; z-index: 100; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .compare-bar.show { display: flex; }
+        .compare-bar .compare-btn { background: #2563eb; color: white; border: none; padding: 6px 14px; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; }
+        
+        /* Buy Button */
+        .mcap-buy { background: #10b981; color: white; border: none; padding: 4px 8px; border-radius: 4px; font-size: 9px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+        .mcap-buy:hover { background: #059669; }
+        
         /* ===== MARKET GRID ===== */
         .market-section { padding: 0 16px; margin-bottom: 8px; }
         .market-filters { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
@@ -868,12 +928,12 @@
 
     <!-- ===== MARKET TAB ===== -->
     <div class="section" id="market">
-        <!-- ===== MARKETCAP SECTION (CoinMarketCap Style) ===== -->
+        <!-- ===== MARKETCAP SECTION (CoinMarketCap Style - Enhanced) ===== -->
         <div class="mcap-section">
             <div class="mcap-header">
                 <div>
                     <div class="mcap-title">📈 AI Hardware MarketCap</div>
-                    <div class="mcap-subtitle">실시간 AI 하드웨어 가격 인덱스 · 마지막 업데이트: 2분 전</div>
+                    <div class="mcap-subtitle">실시간 AI 하드웨어 가격 인덱스 · 마지막 업데이트: 38초 전</div>
                 </div>
                 <div style="font-size:11px;color:#2563eb;font-weight:600;cursor:pointer">전체보기 ›</div>
             </div>
@@ -900,10 +960,36 @@
                     <div class="stat-value">$2.1B</div>
                     <div class="stat-change down">▼ 0.8%</div>
                 </div>
+                <div class="mcap-stat">
+                    <div class="stat-label">시장 감성</div>
+                    <div class="stat-value" style="color:#10b981">탐욕 78</div>
+                    <div class="mcap-sentiment"><div class="sentiment-bar"><div class="bull" style="width:78%"></div></div><span class="sentiment-label">Bull 78%</span></div>
+                </div>
+            </div>
+            
+            <!-- HEATMAP VIEW -->
+            <div class="mcap-view-toggle">
+                <button class="view-btn" onclick="toggleMcapView('heatmap')" id="btn-heatmap">🗺️ 히트맵</button>
+                <button class="view-btn active" onclick="toggleMcapView('table')" id="btn-table">📋 테이블</button>
+                <button class="view-btn" onclick="toggleMcapView('watchlist')" id="btn-watchlist">⭐ 워치리스트</button>
+            </div>
+            
+            <!-- Heatmap -->
+            <div class="mcap-heatmap" id="mcap-heatmap" style="display:none">
+                <div class="heatmap-block" style="background:#15803d;grid-column:span 2;grid-row:span 2"><div class="hm-name">H100 SXM5</div><div class="hm-change">+2.4%</div><div class="hm-price">$28,500</div></div>
+                <div class="heatmap-block" style="background:#059669"><div class="hm-name">B200</div><div class="hm-change">+4.1%</div><div class="hm-price">$42,000</div></div>
+                <div class="heatmap-block" style="background:#047857"><div class="hm-name">HBM3E</div><div class="hm-change">+6.2%</div><div class="hm-price">$580</div></div>
+                <div class="heatmap-block" style="background:#dc2626"><div class="hm-name">RTX 4090</div><div class="hm-change">-1.2%</div><div class="hm-price">$1,599</div></div>
+                <div class="heatmap-block" style="background:#16a34a"><div class="hm-name">MI300X</div><div class="hm-change">+1.5%</div><div class="hm-price">$15,000</div></div>
+                <div class="heatmap-block" style="background:#065f46;grid-column:span 2"><div class="hm-name">Sohu ASIC (Etched)</div><div class="hm-change">+12.3%</div><div class="hm-price">$8,900</div></div>
+                <div class="heatmap-block" style="background:#22c55e"><div class="hm-name">RTX 5090</div><div class="hm-change">+0.8%</div><div class="hm-price">$2,199</div></div>
+                <div class="heatmap-block" style="background:#b91c1c"><div class="hm-name">TPU v5p</div><div class="hm-change">-0.5%</div><div class="hm-price">$3.22/hr</div></div>
+                <div class="heatmap-block" style="background:#166534"><div class="hm-name">R760xa</div><div class="hm-change">+0.3%</div><div class="hm-price">$85,000</div></div>
+                <div class="heatmap-block" style="background:#6b7280"><div class="hm-name">G1 Robot</div><div class="hm-change">0.0%</div><div class="hm-price">$16,000</div></div>
             </div>
             
             <!-- Category Tabs -->
-            <div class="mcap-tabs">
+            <div class="mcap-tabs" id="mcap-table-section">
                 <div class="mcap-tab active">전체</div>
                 <div class="mcap-tab">🔥 Hot</div>
                 <div class="mcap-tab">GPU</div>
@@ -915,152 +1001,226 @@
                 <div class="mcap-tab">쿨링</div>
             </div>
             
-            <!-- Price Table -->
-            <div style="overflow-x:auto">
+            <!-- Price Table (Enhanced) -->
+            <div class="mcap-table-wrap">
             <table class="mcap-table">
                 <thead>
                     <tr>
+                        <th>⭐</th>
                         <th>#</th>
-                        <th>제품명</th>
-                        <th></th>
-                        <th>가격</th>
-                        <th>24h</th>
+                        <th class="sortable" onclick="sortMcap('name')">제품명 <span class="sort-icon">▼</span></th>
+                        <th class="sortable" onclick="sortMcap('price')">가격 <span class="sort-icon">▼</span></th>
+                        <th class="sortable" onclick="sortMcap('change')">24h <span class="sort-icon">▼</span></th>
+                        <th>감성</th>
                         <th>7d 차트</th>
+                        <th>비교</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td><span class="mcap-star" onclick="toggleStar(this)">☆</span></td>
                         <td class="mcap-rank">1</td>
                         <td>
                             <div class="mcap-name-wrap">
                                 <div class="mcap-icon" style="background:#76b900">NV</div>
-                                <div><div class="mcap-name">H100 80GB SXM5</div><div class="mcap-symbol">NVIDIA · GPU</div></div>
+                                <div><div class="mcap-name">H100 80GB SXM5 <span class="mcap-badge hot">🔥 HOT</span></div><div class="mcap-symbol">NVIDIA · GPU · Vol $420M</div></div>
                             </div>
                         </td>
-                        <td></td>
                         <td class="mcap-price">$28,500</td>
                         <td class="mcap-change up">▲ 2.4%</td>
+                        <td><div class="mcap-sentiment"><div class="sentiment-bar"><div class="bull" style="width:82%"></div></div><span class="sentiment-label">82%</span></div></td>
                         <td class="mcap-chart"><svg viewBox="0 0 60 28"><polyline fill="none" stroke="#10b981" stroke-width="2" points="0,22 8,20 16,18 24,15 32,16 40,12 48,10 60,6"/></svg></td>
+                        <td><input type="checkbox" class="mcap-compare" onchange="updateCompare()"></td>
+                        <td><button class="mcap-buy">최저가 →</button></td>
                     </tr>
                     <tr>
+                        <td><span class="mcap-star" onclick="toggleStar(this)">☆</span></td>
                         <td class="mcap-rank">2</td>
                         <td>
                             <div class="mcap-name-wrap">
                                 <div class="mcap-icon" style="background:#76b900">NV</div>
-                                <div><div class="mcap-name">B200 192GB</div><div class="mcap-symbol">NVIDIA · GPU</div></div>
+                                <div><div class="mcap-name">B200 192GB <span class="mcap-badge pump">📈 PUMP</span></div><div class="mcap-symbol">NVIDIA · GPU · Vol $380M</div></div>
                             </div>
                         </td>
-                        <td></td>
                         <td class="mcap-price">$42,000</td>
                         <td class="mcap-change up">▲ 4.1%</td>
+                        <td><div class="mcap-sentiment"><div class="sentiment-bar"><div class="bull" style="width:88%"></div></div><span class="sentiment-label">88%</span></div></td>
                         <td class="mcap-chart"><svg viewBox="0 0 60 28"><polyline fill="none" stroke="#10b981" stroke-width="2" points="0,24 10,20 20,22 30,16 40,14 50,8 60,4"/></svg></td>
+                        <td><input type="checkbox" class="mcap-compare" onchange="updateCompare()"></td>
+                        <td><button class="mcap-buy">최저가 →</button></td>
+                    </tr>
+                    <!-- SPONSORED ROW -->
+                    <tr class="sponsored">
+                        <td><span class="mcap-star" onclick="toggleStar(this)">☆</span></td>
+                        <td class="mcap-rank" style="color:#2563eb">AD</td>
+                        <td>
+                            <div class="mcap-name-wrap">
+                                <div class="mcap-icon" style="background:linear-gradient(135deg,#667eea,#764ba2)">GX</div>
+                                <div><div class="mcap-name">GX Cloud GPU <span class="sponsored-badge">SPONSORED</span></div><div class="mcap-symbol">GX Cloud · GPU 렌탈 · H100 $2.49/hr부터</div></div>
+                            </div>
+                        </td>
+                        <td class="mcap-price" style="color:#2563eb">$2.49/hr</td>
+                        <td class="mcap-change" style="color:#2563eb">프로모션</td>
+                        <td><div class="mcap-sentiment"><div class="sentiment-bar"><div class="bull" style="width:95%"></div></div><span class="sentiment-label">95%</span></div></td>
+                        <td class="mcap-chart"><svg viewBox="0 0 60 28"><polyline fill="none" stroke="#2563eb" stroke-width="2" points="0,20 10,18 20,14 30,12 40,10 50,8 60,4"/></svg></td>
+                        <td></td>
+                        <td><button class="mcap-buy" style="background:#2563eb">무료체험 →</button></td>
                     </tr>
                     <tr>
+                        <td><span class="mcap-star" onclick="toggleStar(this)">☆</span></td>
                         <td class="mcap-rank">3</td>
                         <td>
                             <div class="mcap-name-wrap">
                                 <div class="mcap-icon" style="background:#76b900">NV</div>
-                                <div><div class="mcap-name">RTX 4090 24GB</div><div class="mcap-symbol">NVIDIA · GPU</div></div>
+                                <div><div class="mcap-name">RTX 4090 24GB</div><div class="mcap-symbol">NVIDIA · GPU · Vol $210M</div></div>
                             </div>
                         </td>
-                        <td></td>
                         <td class="mcap-price">$1,599</td>
                         <td class="mcap-change down">▼ 1.2%</td>
+                        <td><div class="mcap-sentiment"><div class="sentiment-bar"><div class="bull" style="width:42%"></div></div><span class="sentiment-label">42%</span></div></td>
                         <td class="mcap-chart"><svg viewBox="0 0 60 28"><polyline fill="none" stroke="#ef4444" stroke-width="2" points="0,8 10,10 20,12 30,14 40,16 50,18 60,20"/></svg></td>
+                        <td><input type="checkbox" class="mcap-compare" onchange="updateCompare()"></td>
+                        <td><button class="mcap-buy">최저가 →</button></td>
                     </tr>
                     <tr>
+                        <td><span class="mcap-star" onclick="toggleStar(this)">☆</span></td>
                         <td class="mcap-rank">4</td>
                         <td>
                             <div class="mcap-name-wrap">
                                 <div class="mcap-icon" style="background:#76b900">NV</div>
-                                <div><div class="mcap-name">RTX 5090 32GB</div><div class="mcap-symbol">NVIDIA · GPU</div></div>
+                                <div><div class="mcap-name">RTX 5090 32GB <span class="mcap-badge new">NEW</span></div><div class="mcap-symbol">NVIDIA · GPU · Vol $95M</div></div>
                             </div>
                         </td>
-                        <td></td>
                         <td class="mcap-price">$2,199</td>
                         <td class="mcap-change up">▲ 0.8%</td>
+                        <td><div class="mcap-sentiment"><div class="sentiment-bar"><div class="bull" style="width:71%"></div></div><span class="sentiment-label">71%</span></div></td>
                         <td class="mcap-chart"><svg viewBox="0 0 60 28"><polyline fill="none" stroke="#10b981" stroke-width="2" points="0,18 10,16 20,14 30,15 40,12 50,10 60,8"/></svg></td>
+                        <td><input type="checkbox" class="mcap-compare" onchange="updateCompare()"></td>
+                        <td><button class="mcap-buy">최저가 →</button></td>
                     </tr>
                     <tr>
+                        <td><span class="mcap-star" onclick="toggleStar(this)">☆</span></td>
                         <td class="mcap-rank">5</td>
                         <td>
                             <div class="mcap-name-wrap">
                                 <div class="mcap-icon" style="background:#ed1c24">AMD</div>
-                                <div><div class="mcap-name">MI300X 192GB</div><div class="mcap-symbol">AMD · GPU</div></div>
+                                <div><div class="mcap-name">MI300X 192GB</div><div class="mcap-symbol">AMD · GPU · Vol $180M</div></div>
                             </div>
                         </td>
-                        <td></td>
                         <td class="mcap-price">$15,000</td>
                         <td class="mcap-change up">▲ 1.5%</td>
+                        <td><div class="mcap-sentiment"><div class="sentiment-bar"><div class="bull" style="width:68%"></div></div><span class="sentiment-label">68%</span></div></td>
                         <td class="mcap-chart"><svg viewBox="0 0 60 28"><polyline fill="none" stroke="#10b981" stroke-width="2" points="0,20 10,18 20,16 30,17 40,14 50,12 60,10"/></svg></td>
+                        <td><input type="checkbox" class="mcap-compare" onchange="updateCompare()"></td>
+                        <td><button class="mcap-buy">최저가 →</button></td>
                     </tr>
                     <tr>
+                        <td><span class="mcap-star active" onclick="toggleStar(this)">★</span></td>
                         <td class="mcap-rank">6</td>
                         <td>
                             <div class="mcap-name-wrap">
                                 <div class="mcap-icon" style="background:#0071c5">SK</div>
-                                <div><div class="mcap-name">HBM3E 36GB</div><div class="mcap-symbol">SK하이닉스 · RAM</div></div>
+                                <div><div class="mcap-name">HBM3E 36GB <span class="mcap-badge pump">📈 PUMP</span></div><div class="mcap-symbol">SK하이닉스 · RAM · Vol $290M</div></div>
                             </div>
                         </td>
-                        <td></td>
                         <td class="mcap-price">$580</td>
                         <td class="mcap-change up">▲ 6.2%</td>
+                        <td><div class="mcap-sentiment"><div class="sentiment-bar"><div class="bull" style="width:91%"></div></div><span class="sentiment-label">91%</span></div></td>
                         <td class="mcap-chart"><svg viewBox="0 0 60 28"><polyline fill="none" stroke="#10b981" stroke-width="2" points="0,26 10,22 20,18 30,14 40,10 50,8 60,4"/></svg></td>
+                        <td><input type="checkbox" class="mcap-compare" onchange="updateCompare()"></td>
+                        <td><button class="mcap-buy">최저가 →</button></td>
+                    </tr>
+                    <!-- SPONSORED ROW 2 -->
+                    <tr class="sponsored">
+                        <td><span class="mcap-star" onclick="toggleStar(this)">☆</span></td>
+                        <td class="mcap-rank" style="color:#2563eb">AD</td>
+                        <td>
+                            <div class="mcap-name-wrap">
+                                <div class="mcap-icon" style="background:linear-gradient(135deg,#f97316,#dc2626)">VT</div>
+                                <div><div class="mcap-name">Vast.ai GPU Rental <span class="sponsored-badge">SPONSORED</span></div><div class="mcap-symbol">Vast.ai · GPU 렌탈 · RTX 4090 $0.20/hr</div></div>
+                            </div>
+                        </td>
+                        <td class="mcap-price" style="color:#2563eb">$0.20/hr</td>
+                        <td class="mcap-change" style="color:#2563eb">최저가</td>
+                        <td><div class="mcap-sentiment"><div class="sentiment-bar"><div class="bull" style="width:87%"></div></div><span class="sentiment-label">87%</span></div></td>
+                        <td class="mcap-chart"><svg viewBox="0 0 60 28"><polyline fill="none" stroke="#2563eb" stroke-width="2" points="0,22 10,18 20,16 30,12 40,10 50,8 60,6"/></svg></td>
+                        <td></td>
+                        <td><button class="mcap-buy" style="background:#2563eb">시작하기 →</button></td>
                     </tr>
                     <tr>
+                        <td><span class="mcap-star" onclick="toggleStar(this)">☆</span></td>
                         <td class="mcap-rank">7</td>
                         <td>
                             <div class="mcap-name-wrap">
                                 <div class="mcap-icon" style="background:#1a73e8">GG</div>
-                                <div><div class="mcap-name">TPU v5p</div><div class="mcap-symbol">Google · ASIC</div></div>
+                                <div><div class="mcap-name">TPU v5p</div><div class="mcap-symbol">Google · ASIC · Vol $45M</div></div>
                             </div>
                         </td>
-                        <td></td>
                         <td class="mcap-price">$3.22/hr</td>
                         <td class="mcap-change down">▼ 0.5%</td>
+                        <td><div class="mcap-sentiment"><div class="sentiment-bar"><div class="bull" style="width:55%"></div></div><span class="sentiment-label">55%</span></div></td>
                         <td class="mcap-chart"><svg viewBox="0 0 60 28"><polyline fill="none" stroke="#ef4444" stroke-width="2" points="0,12 10,13 20,14 30,13 40,14 50,15 60,16"/></svg></td>
+                        <td><input type="checkbox" class="mcap-compare" onchange="updateCompare()"></td>
+                        <td><button class="mcap-buy">최저가 →</button></td>
                     </tr>
                     <tr>
+                        <td><span class="mcap-star" onclick="toggleStar(this)">☆</span></td>
                         <td class="mcap-rank">8</td>
                         <td>
                             <div class="mcap-name-wrap">
                                 <div class="mcap-icon" style="background:#333">ET</div>
-                                <div><div class="mcap-name">Sohu ASIC</div><div class="mcap-symbol">Etched · ASIC</div></div>
+                                <div><div class="mcap-name">Sohu ASIC <span class="mcap-badge pump">📈 +12%</span></div><div class="mcap-symbol">Etched · ASIC · Vol $62M</div></div>
                             </div>
                         </td>
-                        <td></td>
                         <td class="mcap-price">$8,900</td>
                         <td class="mcap-change up">▲ 12.3%</td>
+                        <td><div class="mcap-sentiment"><div class="sentiment-bar"><div class="bull" style="width:94%"></div></div><span class="sentiment-label">94%</span></div></td>
                         <td class="mcap-chart"><svg viewBox="0 0 60 28"><polyline fill="none" stroke="#10b981" stroke-width="2" points="0,26 10,24 20,20 30,16 40,10 50,6 60,2"/></svg></td>
+                        <td><input type="checkbox" class="mcap-compare" onchange="updateCompare()"></td>
+                        <td><button class="mcap-buy">최저가 →</button></td>
                     </tr>
                     <tr>
+                        <td><span class="mcap-star" onclick="toggleStar(this)">☆</span></td>
                         <td class="mcap-rank">9</td>
                         <td>
                             <div class="mcap-name-wrap">
                                 <div class="mcap-icon" style="background:#00a4ef">DL</div>
-                                <div><div class="mcap-name">PowerEdge R760xa</div><div class="mcap-symbol">Dell · 서버</div></div>
+                                <div><div class="mcap-name">PowerEdge R760xa</div><div class="mcap-symbol">Dell · 서버 · Vol $28M</div></div>
                             </div>
                         </td>
-                        <td></td>
                         <td class="mcap-price">$85,000</td>
                         <td class="mcap-change up">▲ 0.3%</td>
+                        <td><div class="mcap-sentiment"><div class="sentiment-bar"><div class="bull" style="width:62%"></div></div><span class="sentiment-label">62%</span></div></td>
                         <td class="mcap-chart"><svg viewBox="0 0 60 28"><polyline fill="none" stroke="#10b981" stroke-width="2" points="0,16 10,15 20,14 30,14 40,13 50,13 60,12"/></svg></td>
+                        <td><input type="checkbox" class="mcap-compare" onchange="updateCompare()"></td>
+                        <td><button class="mcap-buy">최저가 →</button></td>
                     </tr>
                     <tr>
+                        <td><span class="mcap-star" onclick="toggleStar(this)">☆</span></td>
                         <td class="mcap-rank">10</td>
                         <td>
                             <div class="mcap-name-wrap">
                                 <div class="mcap-icon" style="background:#f97316">UT</div>
-                                <div><div class="mcap-name">G1 Humanoid</div><div class="mcap-symbol">Unitree · 로봇</div></div>
+                                <div><div class="mcap-name">G1 Humanoid</div><div class="mcap-symbol">Unitree · 로봇 · Vol $8M</div></div>
                             </div>
                         </td>
-                        <td></td>
                         <td class="mcap-price">$16,000</td>
-                        <td class="mcap-change up">▲ 0.0%</td>
+                        <td class="mcap-change" style="color:#888">- 0.0%</td>
+                        <td><div class="mcap-sentiment"><div class="sentiment-bar"><div class="bull" style="width:50%"></div></div><span class="sentiment-label">50%</span></div></td>
                         <td class="mcap-chart"><svg viewBox="0 0 60 28"><polyline fill="none" stroke="#888" stroke-width="2" points="0,14 10,14 20,14 30,14 40,14 50,14 60,14"/></svg></td>
+                        <td><input type="checkbox" class="mcap-compare" onchange="updateCompare()"></td>
+                        <td><button class="mcap-buy">최저가 →</button></td>
                     </tr>
                 </tbody>
             </table>
+            </div>
+            
+            <!-- Compare Bar (Fixed Bottom) -->
+            <div class="compare-bar" id="compareBar">
+                <span id="compareCount">0</span>개 선택됨
+                <button class="compare-btn" onclick="alert('비교 차트 모달이 열립니다!')">📊 비교하기</button>
+                <span style="cursor:pointer;font-size:16px" onclick="clearCompare()">✕</span>
             </div>
         </div>
         
@@ -1973,6 +2133,116 @@
             event.currentTarget.classList.add('active');
             event.currentTarget.style.background = '#1a1a1a';
             event.currentTarget.style.color = '#fff';
+        }
+
+        // ===== MARKETCAP INTERACTIVE FUNCTIONS =====
+        function toggleMcapView(view) {
+            // Toggle button active states
+            document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('btn-' + view).classList.add('active');
+            
+            // Show/hide sections
+            const heatmap = document.getElementById('mcap-heatmap');
+            const tableSection = document.getElementById('mcap-table-section');
+            const tableWrap = document.querySelector('.mcap-table-wrap');
+            
+            if (view === 'heatmap') {
+                heatmap.style.display = 'grid';
+                tableSection.style.display = 'none';
+                if (tableWrap) tableWrap.style.display = 'none';
+            } else if (view === 'table') {
+                heatmap.style.display = 'none';
+                tableSection.style.display = 'flex';
+                if (tableWrap) tableWrap.style.display = 'block';
+                // Show all rows
+                document.querySelectorAll('.mcap-table tbody tr').forEach(r => r.style.display = '');
+            } else if (view === 'watchlist') {
+                heatmap.style.display = 'none';
+                tableSection.style.display = 'none';
+                if (tableWrap) tableWrap.style.display = 'block';
+                // Only show starred rows
+                document.querySelectorAll('.mcap-table tbody tr').forEach(r => {
+                    const star = r.querySelector('.mcap-star');
+                    if (star && star.classList.contains('active')) {
+                        r.style.display = '';
+                    } else {
+                        r.style.display = 'none';
+                    }
+                });
+            }
+        }
+        
+        function toggleStar(el) {
+            el.classList.toggle('active');
+            el.textContent = el.classList.contains('active') ? '\u2605' : '\u2606';
+        }
+        
+        function sortMcap(field) {
+            const tbody = document.querySelector('.mcap-table tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr:not(.sponsored)'));
+            const sponsored = Array.from(tbody.querySelectorAll('tr.sponsored'));
+            
+            rows.sort((a, b) => {
+                if (field === 'name') {
+                    const nameA = (a.querySelector('.mcap-name') || {}).textContent || '';
+                    const nameB = (b.querySelector('.mcap-name') || {}).textContent || '';
+                    return nameA.localeCompare(nameB);
+                } else if (field === 'price') {
+                    const priceA = parseFloat((a.querySelector('.mcap-price') || {}).textContent.replace(/[^0-9.]/g, '')) || 0;
+                    const priceB = parseFloat((b.querySelector('.mcap-price') || {}).textContent.replace(/[^0-9.]/g, '')) || 0;
+                    return priceB - priceA;
+                } else if (field === 'change') {
+                    const getChange = (row) => {
+                        const el = row.querySelector('.mcap-change');
+                        if (!el) return 0;
+                        const text = el.textContent.replace(/[^0-9.-]/g, '');
+                        const val = parseFloat(text) || 0;
+                        return el.classList.contains('down') ? -val : val;
+                    };
+                    return getChange(b) - getChange(a);
+                }
+                return 0;
+            });
+            
+            // Rebuild tbody: insert rows with sponsored in their original positions
+            tbody.innerHTML = '';
+            let rowIdx = 0;
+            let sponsoredIdx = 0;
+            const sponsoredPositions = [2, 7]; // After rank 2 and rank 7
+            let totalIdx = 0;
+            
+            rows.forEach((row, i) => {
+                tbody.appendChild(row);
+                totalIdx++;
+                if (sponsoredPositions.includes(totalIdx) && sponsoredIdx < sponsored.length) {
+                    tbody.appendChild(sponsored[sponsoredIdx]);
+                    sponsoredIdx++;
+                    totalIdx++;
+                }
+            });
+            // Append remaining sponsored
+            while (sponsoredIdx < sponsored.length) {
+                tbody.appendChild(sponsored[sponsoredIdx]);
+                sponsoredIdx++;
+            }
+        }
+        
+        function updateCompare() {
+            const checked = document.querySelectorAll('.mcap-compare:checked').length;
+            const bar = document.getElementById('compareBar');
+            const count = document.getElementById('compareCount');
+            count.textContent = checked;
+            if (checked > 0) {
+                bar.classList.add('show');
+            } else {
+                bar.classList.remove('show');
+            }
+        }
+        
+        function clearCompare() {
+            document.querySelectorAll('.mcap-compare').forEach(cb => cb.checked = false);
+            document.getElementById('compareBar').classList.remove('show');
+            document.getElementById('compareCount').textContent = '0';
         }
 
         // ===== TAB NAVIGATION =====
