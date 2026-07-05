@@ -257,6 +257,82 @@
         .cloud-table .best { color: #059669; font-weight: 700; }
         .cloud-table .book-btn { padding: 4px 10px; background: #2563eb; border-radius: 6px; font-size: 11px; color: white; text-decoration: none; font-weight: 500; }
         
+        /* ===== AI AGENT CENTER ===== */
+        .agent-section { background: #fff; padding: 16px; margin-bottom: 8px; }
+        .agent-hero-banner { border-radius: 12px; overflow: hidden; margin-bottom: 16px; position: relative; height: 120px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; padding: 20px; }
+        .agent-hero-banner h2 { font-size: 18px; color: white; font-weight: 800; line-height: 1.4; }
+        .agent-hero-banner p { font-size: 12px; color: rgba(255,255,255,0.8); margin-top: 4px; }
+        .agent-hero-banner .hero-icon { font-size: 48px; margin-left: auto; }
+        
+        .referral-banner { background: linear-gradient(90deg, #fef3c7, #fde68a); border-radius: 10px; padding: 12px 16px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .referral-banner .ref-icon { font-size: 28px; }
+        .referral-banner .ref-text { flex: 1; }
+        .referral-banner .ref-title { font-size: 13px; font-weight: 700; color: #92400e; }
+        .referral-banner .ref-desc { font-size: 11px; color: #a16207; margin-top: 2px; }
+        .referral-banner .ref-btn { padding: 6px 12px; background: #f59e0b; color: white; border-radius: 6px; font-size: 11px; font-weight: 600; border: none; cursor: pointer; }
+        
+        .agent-card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 16px; margin-bottom: 12px; position: relative; overflow: hidden; }
+        .agent-card.sponsored { border-color: #dbeafe; background: #f8faff; }
+        .agent-card.sponsored::before { content: 'SPONSORED'; position: absolute; top: 10px; right: 10px; background: #2563eb; color: white; font-size: 9px; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+        .agent-card .agent-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+        .agent-card .agent-icon { width: 48px; height: 48px; border-radius: 12px; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+        .agent-card .agent-icon img { width: 100%; height: 100%; object-fit: cover; }
+        .agent-card .agent-name { font-size: 15px; font-weight: 700; }
+        .agent-card .agent-company { font-size: 11px; color: #888; }
+        .agent-card .agent-rank { font-size: 11px; color: #f59e0b; font-weight: 700; }
+        .agent-card .agent-desc { font-size: 13px; color: #555; line-height: 1.5; margin-bottom: 10px; }
+        .agent-card .agent-desc-simple { font-size: 12px; color: #7c3aed; background: #f5f3ff; padding: 8px 12px; border-radius: 8px; margin-bottom: 10px; line-height: 1.5; }
+        .agent-card .agent-stats { display: flex; gap: 12px; margin-bottom: 10px; flex-wrap: wrap; }
+        .agent-card .agent-stat { background: #f3f4f6; padding: 6px 10px; border-radius: 6px; text-align: center; }
+        .agent-card .agent-stat .val { font-size: 13px; font-weight: 700; color: #1a1a1a; }
+        .agent-card .agent-stat .label { font-size: 9px; color: #888; margin-top: 1px; }
+        .agent-card .agent-pricing { display: flex; gap: 8px; margin-bottom: 10px; align-items: center; }
+        .agent-card .price-tag { padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+        .price-tag.free { background: #d1fae5; color: #059669; }
+        .price-tag.paid { background: #fee2e2; color: #dc2626; }
+        .price-tag.freemium { background: #dbeafe; color: #2563eb; }
+        .agent-card .token-price { font-size: 11px; color: #666; }
+        .agent-card .agent-actions { display: flex; gap: 8px; }
+        .agent-card .agent-btn { flex: 1; padding: 10px; border-radius: 8px; font-size: 13px; font-weight: 600; text-align: center; cursor: pointer; border: none; }
+        .agent-btn.primary { background: #2563eb; color: white; }
+        .agent-btn.secondary { background: #f0f2f5; color: #333; }
+        .agent-btn.referral { background: #f59e0b; color: white; }
+        
+        .agent-ranking { background: #fff; border-radius: 12px; margin-bottom: 12px; }
+        .ranking-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f5f5f5; }
+        .ranking-item:last-child { border-bottom: none; }
+        .ranking-num { width: 24px; font-size: 16px; font-weight: 800; text-align: center; }
+        .ranking-num.gold { color: #f59e0b; }
+        .ranking-num.silver { color: #9ca3af; }
+        .ranking-num.bronze { color: #d97706; }
+        .ranking-icon { width: 36px; height: 36px; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+        .ranking-info { flex: 1; }
+        .ranking-info .r-name { font-size: 13px; font-weight: 600; }
+        .ranking-info .r-cat { font-size: 10px; color: #888; }
+        .ranking-score { text-align: right; }
+        .ranking-score .r-val { font-size: 14px; font-weight: 700; color: #059669; }
+        .ranking-score .r-label { font-size: 9px; color: #888; }
+        
+        /* ===== AI MODEL CENTER ===== */
+        .model-section { background: #fff; padding: 16px; margin-bottom: 8px; }
+        .model-table { width: 100%; border-collapse: collapse; }
+        .model-table th { padding: 8px 6px; font-size: 10px; color: #888; text-align: left; background: #f8fafc; font-weight: 500; white-space: nowrap; }
+        .model-table td { padding: 10px 6px; font-size: 12px; border-top: 1px solid #f0f0f0; }
+        .model-table .model-name { font-weight: 600; font-size: 12px; }
+        .model-table .model-provider { font-size: 10px; color: #888; }
+        .model-table .efficiency-bar { height: 6px; background: #e5e7eb; border-radius: 3px; overflow: hidden; width: 60px; }
+        .model-table .efficiency-fill { height: 100%; border-radius: 3px; }
+        .model-card-detail { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; margin-bottom: 12px; }
+        .model-card-detail .model-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .model-card-detail .model-logo { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; color: white; }
+        .model-card-detail .model-title { font-size: 15px; font-weight: 700; }
+        .model-card-detail .model-sub { font-size: 11px; color: #888; }
+        .model-card-detail .model-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+        .model-card-detail .metric { background: #f8fafc; padding: 10px; border-radius: 8px; text-align: center; }
+        .model-card-detail .metric .m-val { font-size: 14px; font-weight: 800; }
+        .model-card-detail .metric .m-label { font-size: 9px; color: #888; margin-top: 2px; }
+        .model-card-detail .model-simple-desc { font-size: 12px; color: #7c3aed; background: #f5f3ff; padding: 8px 12px; border-radius: 8px; margin-bottom: 10px; line-height: 1.5; }
+        
         /* ===== BOTTOM NAV ===== */
         .bottom-nav {
             position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
@@ -321,6 +397,8 @@
         <div class="top-tab" onclick="showTab('clip')">클립</div>
         <div class="top-tab" onclick="showTab('social')">소셜</div>
         <div class="top-tab" onclick="showTab('invest')">투자</div>
+        <div class="top-tab" onclick="showTab('agent')">AI에이전트</div>
+        <div class="top-tab" onclick="showTab('model')">AI모델</div>
         <div class="top-tab" onclick="showTab('enterprise')">기업</div>
         <div class="top-tab" onclick="showTab('edu')">교육</div>
     </div>
@@ -1007,6 +1085,355 @@
         </div>
     </div>
 
+    <!-- ===== AI AGENT CENTER TAB ===== -->
+    <div class="section" id="agent">
+        <div class="agent-section">
+            <div class="agent-hero-banner">
+                <div>
+                    <h2>AI 에이전트 제품센터</h2>
+                    <p>어린아이도 이해할 수 있는 AI 도우미 소개</p>
+                </div>
+                <span class="hero-icon">🤖</span>
+            </div>
+            
+            <!-- Referral Banner -->
+            <div class="referral-banner">
+                <span class="ref-icon">💰</span>
+                <div class="ref-text">
+                    <div class="ref-title">레퍼럴로 수익 받기!</div>
+                    <div class="ref-desc">친구가 내 링크로 가입하면 매출의 20% 수수료 적립</div>
+                </div>
+                <button class="ref-btn">내 링크 복사</button>
+            </div>
+            
+            <!-- Ranking Section -->
+            <div class="news-section-header">
+                <div class="news-section-title">🏆 이번 주 인기 순위</div>
+                <div class="news-more">전체 순위 ></div>
+            </div>
+            <div class="agent-ranking">
+                <div class="ranking-item"><span class="ranking-num gold">1</span><div class="ranking-icon" style="background:#10a37f">🧠</div><div class="ranking-info"><div class="r-name">ChatGPT Plus</div><div class="r-cat">대화형 AI · OpenAI</div></div><div class="ranking-score"><div class="r-val">98.2</div><div class="r-label">AIX 점수</div></div></div>
+                <div class="ranking-item"><span class="ranking-num silver">2</span><div class="ranking-icon" style="background:#7c3aed">💬</div><div class="ranking-info"><div class="r-name">Claude Pro</div><div class="r-cat">대화형 AI · Anthropic</div></div><div class="ranking-score"><div class="r-val">96.8</div><div class="r-label">AIX 점수</div></div></div>
+                <div class="ranking-item"><span class="ranking-num bronze">3</span><div class="ranking-icon" style="background:#4285f4">✨</div><div class="ranking-info"><div class="r-name">Gemini Advanced</div><div class="r-cat">대화형 AI · Google</div></div><div class="ranking-score"><div class="r-val">95.4</div><div class="r-label">AIX 점수</div></div></div>
+                <div class="ranking-item"><span class="ranking-num">4</span><div class="ranking-icon" style="background:#1a1a1a">💻</div><div class="ranking-info"><div class="r-name">Cursor AI</div><div class="r-cat">코딩 에이전트 · Anysphere</div></div><div class="ranking-score"><div class="r-val">94.1</div><div class="r-label">AIX 점수</div></div></div>
+                <div class="ranking-item"><span class="ranking-num">5</span><div class="ranking-icon" style="background:#f59e0b">🎨</div><div class="ranking-info"><div class="r-name">Midjourney v7</div><div class="r-cat">이미지 생성 · Midjourney</div></div><div class="ranking-score"><div class="r-val">93.7</div><div class="r-label">AIX 점수</div></div></div>
+            </div>
+            
+            <!-- Category Filters -->
+            <div class="market-filters" style="margin:16px 0 14px">
+                <span class="m-filter active">전체</span>
+                <span class="m-filter">대화/챗봇</span>
+                <span class="m-filter">코딩</span>
+                <span class="m-filter">이미지</span>
+                <span class="m-filter">영상</span>
+                <span class="m-filter">음성/TTS</span>
+                <span class="m-filter">고객서비스</span>
+                <span class="m-filter">마케팅</span>
+                <span class="m-filter">데이터분석</span>
+            </div>
+            
+            <!-- Agent Card 1 - Sponsored -->
+            <div class="agent-card sponsored">
+                <div class="agent-top">
+                    <div class="agent-icon" style="background:#10a37f">🧠</div>
+                    <div>
+                        <div class="agent-name">ChatGPT Enterprise</div>
+                        <div class="agent-company">OpenAI · 대화형 AI · ⭐ 4.9 (12.4K)</div>
+                        <div class="agent-rank">🏆 #1 전체 순위</div>
+                    </div>
+                </div>
+                <div class="agent-desc-simple">👶 어린이 설명: "나만의 똑똑한 친구! 뭐든 물어보면 답해주고, 그림도 그려주고, 숙제도 도와줘요!"</div>
+                <div class="agent-desc">기업용 AI 어시스턴트. 문서 작성, 코드 생성, 데이터 분석, 이미지 생성까지 멀티모달 AI의 정점.</div>
+                <div class="agent-stats">
+                    <div class="agent-stat"><div class="val">200M+</div><div class="label">사용자</div></div>
+                    <div class="agent-stat"><div class="val">98.2</div><div class="label">AIX점수</div></div>
+                    <div class="agent-stat"><div class="val">4.9⭐</div><div class="label">평점</div></div>
+                    <div class="agent-stat"><div class="val">150+</div><div class="label">플러그인</div></div>
+                </div>
+                <div class="agent-pricing">
+                    <span class="price-tag freemium">Freemium</span>
+                    <span class="token-price">무료 플랜 있음 · Pro $20/월 · Enterprise $60/월</span>
+                </div>
+                <div class="agent-actions">
+                    <button class="agent-btn primary">사용해보기</button>
+                    <button class="agent-btn referral">💰 레퍼럴 공유</button>
+                </div>
+            </div>
+            
+            <!-- Agent Card 2 -->
+            <div class="agent-card">
+                <div class="agent-top">
+                    <div class="agent-icon" style="background:#1a1a1a">💻</div>
+                    <div>
+                        <div class="agent-name">Cursor AI</div>
+                        <div class="agent-company">Anysphere · 코딩 에이전트 · ⭐ 4.8 (8.7K)</div>
+                        <div class="agent-rank">🏆 #4 전체 · #1 코딩</div>
+                    </div>
+                </div>
+                <div class="agent-desc-simple">👶 어린이 설명: "코드를 대신 써주는 로봇! '로그인 페이지 만들어줘'하면 진짜 만들어줘요!"</div>
+                <div class="agent-desc">AI 기반 코드 에디터. 자연어로 지시하면 코드를 작성/수정/디버깅. 바이브코딩 시대의 필수 도구.</div>
+                <div class="agent-stats">
+                    <div class="agent-stat"><div class="val">2M+</div><div class="label">개발자</div></div>
+                    <div class="agent-stat"><div class="val">94.1</div><div class="label">AIX점수</div></div>
+                    <div class="agent-stat"><div class="val">4.8⭐</div><div class="label">평점</div></div>
+                </div>
+                <div class="agent-pricing">
+                    <span class="price-tag freemium">Freemium</span>
+                    <span class="token-price">무료 2주 · Pro $20/월 · Business $40/월</span>
+                </div>
+                <div class="agent-actions">
+                    <button class="agent-btn primary">사용해보기</button>
+                    <button class="agent-btn referral">💰 레퍼럴 공유</button>
+                </div>
+            </div>
+            
+            <!-- Agent Card 3 -->
+            <div class="agent-card">
+                <div class="agent-top">
+                    <div class="agent-icon" style="background:#f59e0b">🎨</div>
+                    <div>
+                        <div class="agent-name">Midjourney v7</div>
+                        <div class="agent-company">Midjourney · 이미지 생성 · ⭐ 4.7 (15.2K)</div>
+                        <div class="agent-rank">🏆 #5 전체 · #1 이미지</div>
+                    </div>
+                </div>
+                <div class="agent-desc-simple">👶 어린이 설명: "말로 설명하면 그림을 그려주는 마법사! '우주에서 노는 고양이' 하면 진짜 그려줘요!"</div>
+                <div class="agent-desc">AI 이미지 생성 도구. 텍스트 프롬프트로 초고해상도 이미지 생성. 디자이너, 마케터, 콘텐츠 크리에이터 필수.</div>
+                <div class="agent-stats">
+                    <div class="agent-stat"><div class="val">16M+</div><div class="label">사용자</div></div>
+                    <div class="agent-stat"><div class="val">93.7</div><div class="label">AIX점수</div></div>
+                    <div class="agent-stat"><div class="val">4.7⭐</div><div class="label">평점</div></div>
+                </div>
+                <div class="agent-pricing">
+                    <span class="price-tag paid">Paid</span>
+                    <span class="token-price">Basic $10/월 · Standard $30/월 · Pro $60/월</span>
+                </div>
+                <div class="agent-actions">
+                    <button class="agent-btn primary">사용해보기</button>
+                    <button class="agent-btn referral">💰 레퍼럴 공유</button>
+                </div>
+            </div>
+            
+            <!-- Agent Card 4 -->
+            <div class="agent-card">
+                <div class="agent-top">
+                    <div class="agent-icon" style="background:#dc2626">🎬</div>
+                    <div>
+                        <div class="agent-name">Runway Gen-4</div>
+                        <div class="agent-company">Runway · 영상 생성 · ⭐ 4.6 (5.3K)</div>
+                        <div class="agent-rank">#8 전체 · #1 영상</div>
+                    </div>
+                </div>
+                <div class="agent-desc-simple">👶 어린이 설명: "사진을 주면 영화처럼 움직이게 만들어주는 마법! 내 그림이 살아 움직여요!"</div>
+                <div class="agent-desc">AI 영상 생성 도구. 텍스트/이미지에서 고품질 영상 생성. 유튜버, 마케터, 영화 제작자 필수 도구.</div>
+                <div class="agent-stats">
+                    <div class="agent-stat"><div class="val">4M+</div><div class="label">사용자</div></div>
+                    <div class="agent-stat"><div class="val">91.5</div><div class="label">AIX점수</div></div>
+                    <div class="agent-stat"><div class="val">4.6⭐</div><div class="label">평점</div></div>
+                </div>
+                <div class="agent-pricing">
+                    <span class="price-tag freemium">Freemium</span>
+                    <span class="token-price">무료 125크레딧 · Standard $12/월 · Pro $28/월</span>
+                </div>
+                <div class="agent-actions">
+                    <button class="agent-btn primary">사용해보기</button>
+                    <button class="agent-btn referral">💰 레퍼럴 공유</button>
+                </div>
+            </div>
+            
+            <!-- Agent Card 5 - Free -->
+            <div class="agent-card">
+                <div class="agent-top">
+                    <div class="agent-icon" style="background:#059669">📊</div>
+                    <div>
+                        <div class="agent-name">Hugging Face Assistants</div>
+                        <div class="agent-company">Hugging Face · 오픈소스 AI · ⭐ 4.5 (6.1K)</div>
+                        <div class="agent-rank">#12 전체 · #1 오픈소스</div>
+                    </div>
+                </div>
+                <div class="agent-desc-simple">👶 어린이 설명: "무료로 쓸 수 있는 AI 놀이터! 누구나 만들고 공유할 수 있는 AI 장난감 상자!"</div>
+                <div class="agent-desc">오픈소스 AI 모델 허브. 100만개 이상의 모델을 무료로 사용/배포. 개발자 커뮤니티 최대 플랫폼.</div>
+                <div class="agent-stats">
+                    <div class="agent-stat"><div class="val">5M+</div><div class="label">개발자</div></div>
+                    <div class="agent-stat"><div class="val">90.3</div><div class="label">AIX점수</div></div>
+                    <div class="agent-stat"><div class="val">1M+</div><div class="label">모델수</div></div>
+                </div>
+                <div class="agent-pricing">
+                    <span class="price-tag free">Free</span>
+                    <span class="token-price">완전 무료 · Pro $9/월 (추가 GPU)</span>
+                </div>
+                <div class="agent-actions">
+                    <button class="agent-btn primary">사용해보기</button>
+                    <button class="agent-btn secondary">상세정보</button>
+                </div>
+            </div>
+            
+            <!-- Agent Card 6 -->
+            <div class="agent-card">
+                <div class="agent-top">
+                    <div class="agent-icon" style="background:#6366f1">🎙️</div>
+                    <div>
+                        <div class="agent-name">ElevenLabs</div>
+                        <div class="agent-company">ElevenLabs · 음성/TTS · ⭐ 4.7 (3.8K)</div>
+                        <div class="agent-rank">#6 전체 · #1 음성</div>
+                    </div>
+                </div>
+                <div class="agent-desc-simple">👶 어린이 설명: "글을 사람 목소리로 읽어주는 AI! 내 목소리를 복사해서 다른 나라 말도 할 수 있어요!"</div>
+                <div class="agent-desc">AI 음성 합성 및 복제. 자연스러운 음성 생성, 29개 언어 지원. 팝캐스트, 오디오북, 더빙 필수.</div>
+                <div class="agent-stats">
+                    <div class="agent-stat"><div class="val">1.5M+</div><div class="label">사용자</div></div>
+                    <div class="agent-stat"><div class="val">92.8</div><div class="label">AIX점수</div></div>
+                    <div class="agent-stat"><div class="val">29</div><div class="label">언어</div></div>
+                </div>
+                <div class="agent-pricing">
+                    <span class="price-tag freemium">Freemium</span>
+                    <span class="token-price">무료 10분/월 · Starter $5/월 · Pro $22/월</span>
+                </div>
+                <div class="agent-actions">
+                    <button class="agent-btn primary">사용해보기</button>
+                    <button class="agent-btn referral">💰 레퍼럴 공유</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== AI MODEL CENTER TAB ===== -->
+    <div class="section" id="model">
+        <div class="model-section">
+            <div class="agent-hero-banner" style="background:linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)">
+                <div>
+                    <h2>AI 모델 센터</h2>
+                    <p>가격 · 성능 · 효율 비교 한눈에</p>
+                </div>
+                <span class="hero-icon">🧬</span>
+            </div>
+            
+            <!-- Referral for Models -->
+            <div class="referral-banner" style="background:linear-gradient(90deg, #dbeafe, #bfdbfe)">
+                <span class="ref-icon">🔗</span>
+                <div class="ref-text">
+                    <div class="ref-title" style="color:#1e40af">API 레퍼럴 프로그램</div>
+                    <div class="ref-desc" style="color:#1d4ed8">내 링크로 API 가입 시 첨 $100 크레딧 + 매출 15% 적립</div>
+                </div>
+                <button class="ref-btn" style="background:#2563eb">내 링크</button>
+            </div>
+            
+            <!-- Model Ranking Table -->
+            <div class="news-section-header" style="margin-top:16px">
+                <div class="news-section-title">📊 모델 성능/가격 비교</div>
+                <div class="news-more">효율순 ▼</div>
+            </div>
+            <div style="overflow-x:auto">
+                <table class="model-table">
+                    <thead><tr><th>#</th><th>모델</th><th>입력/1M</th><th>출력/1M</th><th>효율</th><th>유/무료</th></tr></thead>
+                    <tbody>
+                        <tr><td style="font-weight:700;color:#f59e0b">1</td><td><div class="model-name">DeepSeek V3</div><div class="model-provider">DeepSeek</div></td><td style="color:#059669;font-weight:700">$0.27</td><td style="color:#059669;font-weight:700">$1.10</td><td><div class="efficiency-bar"><div class="efficiency-fill" style="width:95%;background:#059669"></div></div></td><td><span class="price-tag free">무료</span></td></tr>
+                        <tr><td style="font-weight:700;color:#9ca3af">2</td><td><div class="model-name">Gemini 2.5 Flash</div><div class="model-provider">Google</div></td><td>$0.15</td><td>$0.60</td><td><div class="efficiency-bar"><div class="efficiency-fill" style="width:92%;background:#4285f4"></div></div></td><td><span class="price-tag free">무료</span></td></tr>
+                        <tr><td style="font-weight:700;color:#d97706">3</td><td><div class="model-name">GPT-4.1</div><div class="model-provider">OpenAI</div></td><td>$2.00</td><td>$8.00</td><td><div class="efficiency-bar"><div class="efficiency-fill" style="width:88%;background:#10a37f"></div></div></td><td><span class="price-tag freemium">Freemium</span></td></tr>
+                        <tr><td>4</td><td><div class="model-name">Claude 4 Sonnet</div><div class="model-provider">Anthropic</div></td><td>$3.00</td><td>$15.00</td><td><div class="efficiency-bar"><div class="efficiency-fill" style="width:91%;background:#7c3aed"></div></div></td><td><span class="price-tag paid">유료</span></td></tr>
+                        <tr><td>5</td><td><div class="model-name">GPT-5.4</div><div class="model-provider">OpenAI</div></td><td>$2.50</td><td>$10.00</td><td><div class="efficiency-bar"><div class="efficiency-fill" style="width:96%;background:#10a37f"></div></div></td><td><span class="price-tag paid">유료</span></td></tr>
+                        <tr><td>6</td><td><div class="model-name">Grok 3</div><div class="model-provider">xAI</div></td><td style="color:#059669;font-weight:700">$0.20</td><td style="color:#059669;font-weight:700">$0.60</td><td><div class="efficiency-bar"><div class="efficiency-fill" style="width:85%;background:#1da1f2"></div></div></td><td><span class="price-tag free">무료</span></td></tr>
+                        <tr><td>7</td><td><div class="model-name">Claude 4 Opus</div><div class="model-provider">Anthropic</div></td><td style="color:#dc2626">$15.00</td><td style="color:#dc2626">$75.00</td><td><div class="efficiency-bar"><div class="efficiency-fill" style="width:98%;background:#7c3aed"></div></div></td><td><span class="price-tag paid">유료</span></td></tr>
+                        <tr><td>8</td><td><div class="model-name">Llama 4 Maverick</div><div class="model-provider">Meta (Open)</div></td><td style="color:#059669;font-weight:700">$0.00</td><td style="color:#059669;font-weight:700">$0.00</td><td><div class="efficiency-bar"><div class="efficiency-fill" style="width:82%;background:#0668e1"></div></div></td><td><span class="price-tag free">무료</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Model Detail Cards -->
+            <div class="news-section-header" style="margin-top:20px">
+                <div class="news-section-title">🏆 추천 모델 상세</div>
+                <div class="news-more">전체보기 ></div>
+            </div>
+            
+            <div class="model-card-detail">
+                <div class="model-header">
+                    <div class="model-logo" style="background:#10a37f">GPT</div>
+                    <div>
+                        <div class="model-title">GPT-5.4</div>
+                        <div class="model-sub">OpenAI · 최신 플래그십 모델 · 2026.06</div>
+                    </div>
+                </div>
+                <div class="model-simple-desc">👶 어린이 설명: "세상에서 제일 똑똑한 AI! 수학, 과학, 언어 모두 잘하고, 그림도 볼 수 있어요. 다만 좀 비싸요."</div>
+                <div class="model-metrics">
+                    <div class="metric"><div class="m-val" style="color:#059669">96.2</div><div class="m-label">Arena 점수</div></div>
+                    <div class="metric"><div class="m-val">$2.50</div><div class="m-label">입력/1M토큰</div></div>
+                    <div class="metric"><div class="m-val">$10.00</div><div class="m-label">출력/1M토큰</div></div>
+                </div>
+                <div class="model-metrics">
+                    <div class="metric"><div class="m-val">128K</div><div class="m-label">컨텍스트</div></div>
+                    <div class="metric"><div class="m-val">85 tok/s</div><div class="m-label">출력 속도</div></div>
+                    <div class="metric"><div class="m-val">텍스트+비전</div><div class="m-label">모달리티</div></div>
+                </div>
+                <div class="agent-actions">
+                    <button class="agent-btn primary">API 사용하기</button>
+                    <button class="agent-btn referral">💰 레퍼럴</button>
+                </div>
+            </div>
+            
+            <div class="model-card-detail">
+                <div class="model-header">
+                    <div class="model-logo" style="background:#1a73e8">DS</div>
+                    <div>
+                        <div class="model-title">DeepSeek V3 🏅 가성비 1위</div>
+                        <div class="model-sub">DeepSeek · 최고 가성비 · 2025.12</div>
+                    </div>
+                </div>
+                <div class="model-simple-desc">👶 어린이 설명: "아주 저렴하지만 똑똑한 AI! 용돈이 적을 때 최고의 선택. 중국에서 만들었어요."</div>
+                <div class="model-metrics">
+                    <div class="metric"><div class="m-val" style="color:#059669">91.8</div><div class="m-label">Arena 점수</div></div>
+                    <div class="metric"><div class="m-val" style="color:#059669">$0.27</div><div class="m-label">입력/1M토큰</div></div>
+                    <div class="metric"><div class="m-val" style="color:#059669">$1.10</div><div class="m-label">출력/1M토큰</div></div>
+                </div>
+                <div class="model-metrics">
+                    <div class="metric"><div class="m-val">64K</div><div class="m-label">컨텍스트</div></div>
+                    <div class="metric"><div class="m-val">120 tok/s</div><div class="m-label">출력 속도</div></div>
+                    <div class="metric"><div class="m-val">텍스트</div><div class="m-label">모달리티</div></div>
+                </div>
+                <div class="agent-actions">
+                    <button class="agent-btn primary">API 사용하기</button>
+                    <button class="agent-btn secondary">벤치마크 보기</button>
+                </div>
+            </div>
+            
+            <div class="model-card-detail">
+                <div class="model-header">
+                    <div class="model-logo" style="background:#7c3aed">CL</div>
+                    <div>
+                        <div class="model-title">Claude 4 Opus 🏅 성능 1위</div>
+                        <div class="model-sub">Anthropic · 최고 성능 · 2026.05</div>
+                    </div>
+                </div>
+                <div class="model-simple-desc">👶 어린이 설명: "제일 비싸지만 제일 똑똑한 AI! 어려운 문제를 풀 때 최고의 선택이에요."</div>
+                <div class="model-metrics">
+                    <div class="metric"><div class="m-val" style="color:#7c3aed">98.1</div><div class="m-label">Arena 점수</div></div>
+                    <div class="metric"><div class="m-val" style="color:#dc2626">$15.00</div><div class="m-label">입력/1M토큰</div></div>
+                    <div class="metric"><div class="m-val" style="color:#dc2626">$75.00</div><div class="m-label">출력/1M토큰</div></div>
+                </div>
+                <div class="model-metrics">
+                    <div class="metric"><div class="m-val">200K</div><div class="m-label">컨텍스트</div></div>
+                    <div class="metric"><div class="m-val">45 tok/s</div><div class="m-label">출력 속도</div></div>
+                    <div class="metric"><div class="m-val">텍스트+비전</div><div class="m-label">모달리티</div></div>
+                </div>
+                <div class="agent-actions">
+                    <button class="agent-btn primary">API 사용하기</button>
+                    <button class="agent-btn referral">💰 레퍼럴</button>
+                </div>
+            </div>
+            
+            <!-- Free Models Section -->
+            <div class="news-section-header" style="margin-top:16px">
+                <div class="news-section-title">🆓 무료 모델 TOP</div>
+                <div class="news-more">전체 ></div>
+            </div>
+            <div class="agent-ranking">
+                <div class="ranking-item"><span class="ranking-num gold">1</span><div class="ranking-icon" style="background:#0668e1">🦙</div><div class="ranking-info"><div class="r-name">Llama 4 Maverick (405B)</div><div class="r-cat">Meta · 완전 무료 · 오픈소스</div></div><div class="ranking-score"><div class="r-val">$0.00</div><div class="r-label">토큰 비용</div></div></div>
+                <div class="ranking-item"><span class="ranking-num silver">2</span><div class="ranking-icon" style="background:#1a73e8">🐋</div><div class="ranking-info"><div class="r-name">DeepSeek V3</div><div class="r-cat">DeepSeek · 초저가 · 성능 우수</div></div><div class="ranking-score"><div class="r-val">$0.27</div><div class="r-label">입력/1M</div></div></div>
+                <div class="ranking-item"><span class="ranking-num bronze">3</span><div class="ranking-icon" style="background:#4285f4">⚡</div><div class="ranking-info"><div class="r-name">Gemini 2.5 Flash</div><div class="r-cat">Google · 무료 티어 · 초고속</div></div><div class="ranking-score"><div class="r-val">$0.15</div><div class="r-label">입력/1M</div></div></div>
+                <div class="ranking-item"><span class="ranking-num">4</span><div class="ranking-icon" style="background:#1da1f2">🦉</div><div class="ranking-info"><div class="r-name">Grok 3</div><div class="r-cat">xAI · X 프리미엄 포함 · 실시간</div></div><div class="ranking-score"><div class="r-val">$0.20</div><div class="r-label">입력/1M</div></div></div>
+            </div>
+        </div>
+    </div>
+
     <!-- BOTTOM NAV -->
     <div class="bottom-nav">
         <div class="nav-item active" onclick="showTab('home')"><span class="nav-icon">🏠</span><span class="nav-label">홈</span></div>
@@ -1023,7 +1450,7 @@
             document.querySelectorAll('.top-tab').forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
             
-            const tabMap = {home:0, content:1, news:2, market:3, clip:4, social:5, invest:6, enterprise:7, edu:8};
+            const tabMap = {home:0, content:1, news:2, market:3, clip:4, social:5, invest:6, agent:7, model:8, enterprise:9, edu:10};
             const navMap = {home:0, content:1, news:2, market:3, social:4};
             
             if(tabMap[id] !== undefined) document.querySelectorAll('.top-tab')[tabMap[id]].classList.add('active');
