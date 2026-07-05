@@ -899,11 +899,19 @@
     <div class="section" id="social">
         <div class="social-section">
             <div class="news-section-header">
-                <div class="news-section-title">🐦 실시간 소셜 피드</div>
-                <div class="news-more">X · Reddit · LinkedIn</div>
+                <div class="news-section-title">📡 실시간 소셜 피드</div>
+                <div class="news-more">전체</div>
+            </div>
+            <!-- Platform Filter Tabs -->
+            <div style="display:flex;gap:8px;margin-bottom:14px;overflow-x:auto;padding-bottom:4px;">
+                <div onclick="filterSocial('all')" class="social-filter active" style="padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;background:#1a1a1a;color:#fff;">전체</div>
+                <div onclick="filterSocial('x')" class="social-filter" style="padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;background:#f3f4f6;color:#333;">𝕏 X</div>
+                <div onclick="filterSocial('instagram')" class="social-filter" style="padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;background:#f3f4f6;color:#333;">📷 Instagram</div>
+                <div onclick="filterSocial('facebook')" class="social-filter" style="padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;background:#f3f4f6;color:#333;">👤 Facebook</div>
+                <div onclick="filterSocial('youtube')" class="social-filter" style="padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;background:#f3f4f6;color:#333;">▶️ YouTube</div>
             </div>
             
-            <div class="social-item">
+            <div class="social-item" data-platform="x">
                 <div class="social-header">
                     <div class="social-avatar" style="background:#f59e0b">SN</div>
                     <div>
@@ -920,7 +928,7 @@
                 </div>
             </div>
             
-            <div class="social-item">
+            <div class="social-item" data-platform="x">
                 <div class="social-header">
                     <div class="social-avatar" style="background:#1a1a1a">NX</div>
                     <div>
@@ -936,7 +944,7 @@
                 </div>
             </div>
             
-            <div class="social-item">
+            <div class="social-item" data-platform="x">
                 <div class="social-header">
                     <div class="social-avatar" style="background:#2563eb">TZ</div>
                     <div>
@@ -952,7 +960,7 @@
                 </div>
             </div>
             
-            <div class="social-item">
+            <div class="social-item" data-platform="x">
                 <div class="social-header">
                     <div class="social-avatar" style="background:#059669">TH</div>
                     <div>
@@ -969,7 +977,7 @@
                 </div>
             </div>
             
-            <div class="social-item">
+            <div class="social-item" data-platform="x">
                 <div class="social-header">
                     <div class="social-avatar" style="background:#7c3aed">VX</div>
                     <div>
@@ -985,7 +993,7 @@
                 </div>
             </div>
             
-            <div class="social-item">
+            <div class="social-item" data-platform="x">
                 <div class="social-header">
                     <div class="social-avatar" style="background:#dc2626">AR</div>
                     <div>
@@ -1001,7 +1009,7 @@
                 </div>
             </div>
             
-            <div class="social-item">
+            <div class="social-item" data-platform="x">
                 <div class="social-header">
                     <div class="social-avatar" style="background:#f59e0b">BN</div>
                     <div>
@@ -1017,7 +1025,7 @@
                 </div>
             </div>
             
-            <div class="social-item">
+            <div class="social-item" data-platform="x">
                 <div class="social-header">
                     <div class="social-avatar" style="background:#6366f1">CM</div>
                     <div>
@@ -1032,6 +1040,157 @@
                     <span>💬 0</span>
                 </div>
             </div>
+
+            <!-- INSTAGRAM POSTS -->
+            <div class="social-item" data-platform="instagram">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">NV</div>
+                    <div>
+                        <div class="social-name">NVIDIA <span class="social-badge" style="background:#fce7f3;color:#db2777">Instagram · 3.2M</span></div>
+                        <div class="social-handle">@nvidia · Instagram</div>
+                    </div>
+                </div>
+                <div class="social-content">The future of AI computing is here. Our new Blackwell B300 GPU delivers 2.5x performance over H100 for large language model training. See what's possible. 🚀 #NVIDIA #AI #GPU</div>
+                <div class="social-image"><img src="img/gpu_cluster.jpg" alt=""></div>
+                <div class="social-actions">
+                    <span>❤️ 45.2K</span>
+                    <span>💬 1,203</span>
+                    <span>📤 8,412</span>
+                </div>
+            </div>
+
+            <div class="social-item" data-platform="instagram">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743)">BD</div>
+                    <div>
+                        <div class="social-name">Boston Dynamics <span class="social-badge" style="background:#fce7f3;color:#db2777">Instagram · 4.1M</span></div>
+                        <div class="social-handle">@baborobots · Instagram</div>
+                    </div>
+                </div>
+                <div class="social-content">Atlas can now autonomously navigate warehouse environments and handle packages up to 25kg. Watch the full demo in our bio link. 🤖📦 #Robotics #AI #Automation</div>
+                <div class="social-image"><img src="img/humanoid_robots2.jpg" alt=""></div>
+                <div class="social-actions">
+                    <span>❤️ 128K</span>
+                    <span>💬 3,891</span>
+                    <span>📤 22.1K</span>
+                </div>
+            </div>
+
+            <div class="social-item" data-platform="instagram">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:linear-gradient(45deg,#405de6,#833ab4,#c13584)">OA</div>
+                    <div>
+                        <div class="social-name">OpenAI <span class="social-badge" style="background:#fce7f3;color:#db2777">Instagram · 1.8M</span></div>
+                        <div class="social-handle">@openai · Instagram</div>
+                    </div>
+                </div>
+                <div class="social-content">GPT-5 is redefining what's possible with AI reasoning. From complex math to creative writing, see the benchmarks that are changing the industry. Link in bio for full report. 🧠✨</div>
+                <div class="social-actions">
+                    <span>❤️ 67.8K</span>
+                    <span>💬 2,104</span>
+                    <span>📤 15.3K</span>
+                </div>
+            </div>
+
+            <!-- FACEBOOK POSTS -->
+            <div class="social-item" data-platform="facebook">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#1877f2">MA</div>
+                    <div>
+                        <div class="social-name">Mark Zuckerberg <span class="social-badge" style="background:#dbeafe;color:#1d4ed8">Facebook · CEO</span></div>
+                        <div class="social-handle">Meta AI · Facebook</div>
+                    </div>
+                </div>
+                <div class="social-content">We're open-sourcing Llama 4 today. It's our most capable model yet - 400B parameters, multimodal, and it outperforms GPT-4 on most benchmarks. Free for everyone to use and build on. This is how AI should be developed - openly.</div>
+                <div class="social-actions">
+                    <span>👍 234K</span>
+                    <span>💬 18.2K</span>
+                    <span>📤 45.1K</span>
+                </div>
+            </div>
+
+            <div class="social-item" data-platform="facebook">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#1877f2">AI</div>
+                    <div>
+                        <div class="social-name">AI Hardware Forum <span class="social-badge" style="background:#dbeafe;color:#1d4ed8">Facebook · 89K members</span></div>
+                        <div class="social-handle">AI Hardware Community · Facebook</div>
+                    </div>
+                </div>
+                <div class="social-content">🔥 [Group Discussion] RTX 5090 vs H100 for local LLM inference - which gives better price/performance? Our members tested both with Llama 3.1 70B and the results are surprising. Full benchmark thread in comments below.</div>
+                <div class="social-actions">
+                    <span>👍 1.2K</span>
+                    <span>💬 347</span>
+                    <span>📤 89</span>
+                </div>
+            </div>
+
+            <div class="social-item" data-platform="facebook">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#1877f2">DL</div>
+                    <div>
+                        <div class="social-name">Deep Learning AI <span class="social-badge" style="background:#dbeafe;color:#1d4ed8">Facebook · 2.1M</span></div>
+                        <div class="social-handle">DeepLearning.AI · Facebook</div>
+                    </div>
+                </div>
+                <div class="social-content">Andrew Ng: "The GPU shortage is creating a new class of AI startups - those who optimize for efficiency rather than scale. Companies running 7B models that match GPT-4 quality on specific tasks are the future."</div>
+                <div class="social-actions">
+                    <span>👍 5.6K</span>
+                    <span>💬 412</span>
+                    <span>📤 1.8K</span>
+                </div>
+            </div>
+
+            <!-- YOUTUBE POSTS -->
+            <div class="social-item" data-platform="youtube">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#ff0000">LT</div>
+                    <div>
+                        <div class="social-name">Linus Tech Tips <span class="social-badge" style="background:#fee2e2;color:#dc2626">YouTube · 16.2M</span></div>
+                        <div class="social-handle">@LinusTechTips · YouTube</div>
+                    </div>
+                </div>
+                <div class="social-content">🎬 We Built a $500K AI Training Cluster in Our Garage | Is it worth it vs Cloud GPU rental? Full cost breakdown and performance comparison inside.</div>
+                <div class="social-image"><img src="img/server_rack.jpg" alt=""></div>
+                <div class="social-actions">
+                    <span>👁️ 2.3M views</span>
+                    <span>👍 89K</span>
+                    <span>💬 4,521</span>
+                </div>
+            </div>
+
+            <div class="social-item" data-platform="youtube">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#ff0000">2M</div>
+                    <div>
+                        <div class="social-name">Two Minute Papers <span class="social-badge" style="background:#fee2e2;color:#dc2626">YouTube · 1.6M</span></div>
+                        <div class="social-handle">@TwoMinutePapers · YouTube</div>
+                    </div>
+                </div>
+                <div class="social-content">🎬 NVIDIA's New AI Chip Makes Everything 10x Faster! | Blackwell B300 Deep Dive - What a time to be alive! This new architecture changes everything we know about AI training efficiency.</div>
+                <div class="social-actions">
+                    <span>👁️ 890K views</span>
+                    <span>👍 42K</span>
+                    <span>💬 1,892</span>
+                </div>
+            </div>
+
+            <div class="social-item" data-platform="youtube">
+                <div class="social-header">
+                    <div class="social-avatar" style="background:#ff0000">FW</div>
+                    <div>
+                        <div class="social-name">Fireship <span class="social-badge" style="background:#fee2e2;color:#dc2626">YouTube · 3.1M</span></div>
+                        <div class="social-handle">@Fireship · YouTube</div>
+                    </div>
+                </div>
+                <div class="social-content">🎬 GPU Prices are CRASHING... here's why | The AI hardware bubble explained in 100 seconds. Spoiler: China's DeepSeek proved you don't need $10M in GPUs to build competitive AI.</div>
+                <div class="social-actions">
+                    <span>👁️ 1.5M views</span>
+                    <span>👍 67K</span>
+                    <span>💬 3,201</span>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -1555,6 +1714,27 @@
             }
         })();
         
+        // ===== SOCIAL FILTER =====
+        function filterSocial(platform) {
+            const items = document.querySelectorAll('#social .social-item');
+            items.forEach(item => {
+                if (platform === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = item.dataset.platform === platform ? 'block' : 'none';
+                }
+            });
+            // Update filter button styles
+            document.querySelectorAll('.social-filter').forEach(btn => {
+                btn.classList.remove('active');
+                btn.style.background = '#f3f4f6';
+                btn.style.color = '#333';
+            });
+            event.currentTarget.classList.add('active');
+            event.currentTarget.style.background = '#1a1a1a';
+            event.currentTarget.style.color = '#fff';
+        }
+
         // ===== TAB NAVIGATION =====
         function showTab(id) {
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
