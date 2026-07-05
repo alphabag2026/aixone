@@ -27,6 +27,20 @@
         .header-icon { font-size: 20px; position: relative; cursor: pointer; }
         .badge { position: absolute; top: -4px; right: -6px; background: #ef4444; color: white; font-size: 9px; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
         
+        /* ===== LANGUAGE SELECTOR ===== */
+        .lang-selector { position: relative; cursor: pointer; }
+        .lang-current { display: flex; align-items: center; gap: 4px; padding: 4px 8px; border-radius: 6px; background: #f3f4f6; font-size: 13px; font-weight: 600; }
+        .lang-current .flag { font-size: 16px; }
+        .lang-dropdown { display: none; position: absolute; top: 36px; right: 0; background: white; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); padding: 8px 0; min-width: 180px; z-index: 200; }
+        .lang-dropdown.show { display: block; }
+        .lang-option { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 13px; cursor: pointer; transition: background 0.2s; }
+        .lang-option:hover { background: #f3f4f6; }
+        .lang-option .flag { font-size: 18px; }
+        .lang-option .lang-name { font-weight: 500; }
+        .lang-option .lang-region { font-size: 10px; color: #888; margin-left: auto; }
+        .lang-option.active { background: #eff6ff; }
+        .lang-option.active .lang-name { color: #2563eb; font-weight: 700; }
+        
         /* ===== TOP TABS ===== */
         .top-tabs {
             background: #fff; display: flex; overflow-x: auto;
@@ -377,6 +391,41 @@
             <div class="logo">AIX<span>ONE</span></div>
         </div>
         <div class="header-right">
+            <div class="lang-selector" onclick="toggleLangDropdown(event)">
+                <div class="lang-current"><span class="flag" id="currentFlag">🇰🇷</span><span id="currentLang">KR</span></div>
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-option active" onclick="switchLang('ko','🇰🇷','KR')">
+                        <span class="flag">🇰🇷</span><span class="lang-name">한국어</span><span class="lang-region">대한민국</span>
+                    </div>
+                    <div class="lang-option" onclick="switchLang('en','🇺🇸','EN')">
+                        <span class="flag">🇺🇸</span><span class="lang-name">English</span><span class="lang-region">United States</span>
+                    </div>
+                    <div class="lang-option" onclick="switchLang('zh','🇨🇳','CN')">
+                        <span class="flag">🇨🇳</span><span class="lang-name">中文</span><span class="lang-region">中国</span>
+                    </div>
+                    <div class="lang-option" onclick="switchLang('ja','🇯🇵','JP')">
+                        <span class="flag">🇯🇵</span><span class="lang-name">日本語</span><span class="lang-region">日本</span>
+                    </div>
+                    <div class="lang-option" onclick="switchLang('vi','🇻🇳','VN')">
+                        <span class="flag">🇻🇳</span><span class="lang-name">Tiếng Việt</span><span class="lang-region">Việt Nam</span>
+                    </div>
+                    <div class="lang-option" onclick="switchLang('th','🇹🇭','TH')">
+                        <span class="flag">🇹🇭</span><span class="lang-name">ไทย</span><span class="lang-region">ประเทศไทย</span>
+                    </div>
+                    <div class="lang-option" onclick="switchLang('id','🇮🇩','ID')">
+                        <span class="flag">🇮🇩</span><span class="lang-name">Bahasa</span><span class="lang-region">Indonesia</span>
+                    </div>
+                    <div class="lang-option" onclick="switchLang('ar','🇸🇦','AR')">
+                        <span class="flag">🇸🇦</span><span class="lang-name">العربية</span><span class="lang-region">السعودية</span>
+                    </div>
+                    <div class="lang-option" onclick="switchLang('es','🇪🇸','ES')">
+                        <span class="flag">🇪🇸</span><span class="lang-name">Español</span><span class="lang-region">España</span>
+                    </div>
+                    <div class="lang-option" onclick="switchLang('ru','🇷🇺','RU')">
+                        <span class="flag">🇷🇺</span><span class="lang-name">Русский</span><span class="lang-region">Россия</span>
+                    </div>
+                </div>
+            </div>
             <span class="header-icon">🔔<span class="badge">5</span></span>
             <span class="header-icon">👤</span>
         </div>
@@ -1444,6 +1493,67 @@
     </div>
 
     <script>
+        // ===== LANGUAGE / LOCALE SYSTEM =====
+        const translations = {
+            ko: { home:'홈', agent:'AI에이전트', model:'AI모델', content:'콘텐츠', news:'뉴스', market:'마켓', clip:'클립', social:'소셜', invest:'투자', enterprise:'기업', edu:'교육', search:'검색어를 입력하세요', currency:'KRW', liveFeed:'🟢 @user_tokyo가 RTX 4090을 ₩1,800,000에 등록 · @nvidia_labs가 B300 벤치마크 공개 · Ayar Labs $500M 시리즈E 투자 유치' },
+            en: { home:'Home', agent:'AI Agents', model:'AI Models', content:'Content', news:'News', market:'Market', clip:'Clips', social:'Social', invest:'Invest', enterprise:'Enterprise', edu:'Education', search:'Search AI hardware, agents, models...', currency:'USD', liveFeed:'🟢 @user_tokyo listed RTX 4090 at $1,350 · @nvidia_labs released B300 benchmark · Ayar Labs raised $500M Series E' },
+            zh: { home:'首页', agent:'AI智能体', model:'AI模型', content:'内容', news:'新闻', market:'市场', clip:'视频', social:'社交', invest:'投资', enterprise:'企业', edu:'教育', search:'搜索AI硬件、智能体、模型...', currency:'CNY', liveFeed:'🟢 @user_tokyo以$1,350上架RTX 4090 · @nvidia_labs发布B300基准测试 · Ayar Labs完成$500M E轮融资' },
+            ja: { home:'ホーム', agent:'AIエージェント', model:'AIモデル', content:'コンテンツ', news:'ニュース', market:'マーケット', clip:'クリップ', social:'ソーシャル', invest:'投資', enterprise:'企業', edu:'教育', search:'AIハードウェア、エージェント、モデルを検索...', currency:'JPY', liveFeed:'🟢 @user_tokyoがRTX 4090を$1,350で出品 · @nvidia_labsがB300ベンチマーク公開 · Ayar Labs $500M調達' },
+            vi: { home:'Trang chủ', agent:'AI Agent', model:'AI Model', content:'Nội dung', news:'Tin tức', market:'Chợ', clip:'Video', social:'Xã hội', invest:'Đầu tư', enterprise:'Doanh nghiệp', edu:'Giáo dục', search:'Tìm kiếm phần cứng AI, agent, model...', currency:'VND', liveFeed:'🟢 @user_tokyo đăng RTX 4090 giá $1,350 · @nvidia_labs công bố benchmark B300 · Ayar Labs huy động $500M' },
+            th: { home:'หน้าแรก', agent:'AI เอเจนต์', model:'AI โมเดล', content:'เนื้อหา', news:'ข่าว', market:'ตลาด', clip:'คลิป', social:'โซเชียล', invest:'ลงทุน', enterprise:'องค์กร', edu:'การศึกษา', search:'ค้นหา AI hardware, agent, model...', currency:'THB', liveFeed:'🟢 @user_tokyo ลง RTX 4090 ราคา $1,350 · @nvidia_labs เผย B300 benchmark' },
+            id: { home:'Beranda', agent:'AI Agen', model:'AI Model', content:'Konten', news:'Berita', market:'Pasar', clip:'Klip', social:'Sosial', invest:'Investasi', enterprise:'Perusahaan', edu:'Edukasi', search:'Cari hardware AI, agen, model...', currency:'IDR', liveFeed:'🟢 @user_tokyo mendaftarkan RTX 4090 seharga $1,350 · @nvidia_labs merilis benchmark B300' },
+            ar: { home:'الرئيسية', agent:'AI وكيل', model:'AI نموذج', content:'محتوى', news:'أخبار', market:'سوق', clip:'مقاطع', social:'اجتماعي', invest:'استثمار', enterprise:'شركات', edu:'تعليم', search:'بحث عن أجهزة AI...', currency:'SAR', liveFeed:'🟢 @user_tokyo أدرج RTX 4090 بسعر $1,350' },
+            es: { home:'Inicio', agent:'AI Agentes', model:'AI Modelos', content:'Contenido', news:'Noticias', market:'Mercado', clip:'Clips', social:'Social', invest:'Inversión', enterprise:'Empresas', edu:'Educación', search:'Buscar hardware AI, agentes, modelos...', currency:'EUR', liveFeed:'🟢 @user_tokyo listó RTX 4090 a $1,350 · @nvidia_labs publicó benchmark B300' },
+            ru: { home:'Главная', agent:'AI Агенты', model:'AI Модели', content:'Контент', news:'Новости', market:'Маркет', clip:'Клипы', social:'Социальные', invest:'Инвестиции', enterprise:'Компании', edu:'Образование', search:'Поиск AI оборудования, агентов, моделей...', currency:'RUB', liveFeed:'🟢 @user_tokyo разместил RTX 4090 за $1,350 · @nvidia_labs опубликовал бенчмарк B300' }
+        };
+        
+        let currentLocale = localStorage.getItem('aixone_lang') || 'ko';
+        
+        function toggleLangDropdown(e) {
+            e.stopPropagation();
+            document.getElementById('langDropdown').classList.toggle('show');
+        }
+        document.addEventListener('click', () => document.getElementById('langDropdown').classList.remove('show'));
+        
+        function switchLang(lang, flag, code) {
+            currentLocale = lang;
+            localStorage.setItem('aixone_lang', lang);
+            document.getElementById('currentFlag').textContent = flag;
+            document.getElementById('currentLang').textContent = code;
+            document.querySelectorAll('.lang-option').forEach(o => o.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            applyTranslations(lang);
+            document.getElementById('langDropdown').classList.remove('show');
+        }
+        
+        function applyTranslations(lang) {
+            const t = translations[lang];
+            if (!t) return;
+            const tabKeys = ['home','agent','model','content','news','market','clip','social','invest','enterprise','edu'];
+            document.querySelectorAll('.top-tab').forEach((tab, i) => {
+                if (tabKeys[i] && t[tabKeys[i]]) tab.textContent = t[tabKeys[i]];
+            });
+            const searchInput = document.querySelector('.search-input');
+            if (searchInput) searchInput.placeholder = t.search;
+            const liveText = document.querySelector('.live-text');
+            if (liveText) liveText.textContent = t.liveFeed;
+            document.documentElement.lang = lang;
+        }
+        
+        // Init locale on load
+        (function initLocale() {
+            const saved = localStorage.getItem('aixone_lang');
+            if (saved && saved !== 'ko') {
+                const langMap = {en:['🇺🇸','EN'], zh:['🇨🇳','CN'], ja:['🇯🇵','JP'], vi:['🇻🇳','VN'], th:['🇹🇭','TH'], id:['🇮🇩','ID'], ar:['🇸🇦','AR'], es:['🇪🇸','ES'], ru:['🇷🇺','RU']};
+                if (langMap[saved]) {
+                    document.getElementById('currentFlag').textContent = langMap[saved][0];
+                    document.getElementById('currentLang').textContent = langMap[saved][1];
+                }
+                applyTranslations(saved);
+            }
+        })();
+        
+        // ===== TAB NAVIGATION =====
         function showTab(id) {
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
             document.getElementById(id).classList.add('active');
